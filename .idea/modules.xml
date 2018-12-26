@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/babasport12/babasport.iml" filepath="$PROJECT_DIR$/babasport12/babasport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chenjin-config/chenjin-config.iml" filepath="$PROJECT_DIR$/chenjin-config/chenjin-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chenjin-parent/chenjin-parent.iml" filepath="$PROJECT_DIR$/chenjin-parent/chenjin-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chenjin-web-flyTicket/chenjin-web-flyTicket.iml" filepath="$PROJECT_DIR$/chenjin-web-flyTicket/chenjin-web-flyTicket.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/chenjinProjectGit.iml" filepath="$PROJECT_DIR$/.idea/chenjinProjectGit.iml" />
     </modules>
   </component>

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="babasport" />
+        <module name="chenjin-config" />
+        <module name="chenjin-web-flyTicket" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="babasport" target="1.5" />
+      <module name="chenjin-config" target="1.7" />
+      <module name="chenjin-parent" target="1.5" />
+      <module name="chenjin-web-flyTicket" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
