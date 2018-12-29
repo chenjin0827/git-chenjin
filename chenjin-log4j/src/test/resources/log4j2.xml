@@ -76,7 +76,7 @@
         </RollingRandomAccessFile>
     </Appenders>
     <Loggers>
-        <!--<Logger name="com.test.TestLog4j2" level="error" additivity="true">
+        <!--<Logger name="com.test.TestLog4j2" level="all" additivity="true">
             <AppenderRef ref="TimFile" />
         </Logger>-->
         <Root level="trace">
@@ -86,5 +86,19 @@
             <AppenderRef ref="ErrorFile" />
             <AppenderRef ref="FatalFile" />
         </Root>
+        <!--<AsyncLogger name="com.test.TestLog4j2" level="debug" additivity="false">
+            &lt;!&ndash;<AppenderRef ref="Console"/>&ndash;&gt;
+            <AppenderRef ref="DebugFile"/>
+            <AppenderRef ref="InfoFile" />
+            <AppenderRef ref="ErrorFile" />
+            <AppenderRef ref="FatalFile" />
+        </AsyncLogger>-->
+        <!--<AsyncRoot level="trace">
+            &lt;!&ndash;<AppenderRef ref="Console"/>&ndash;&gt;
+            <AppenderRef ref="DebugFile"/>
+            <AppenderRef ref="InfoFile" />
+            <AppenderRef ref="ErrorFile" />
+            <AppenderRef ref="FatalFile" />
+        </AsyncRoot>-->
     </Loggers>
 </Configuration>
