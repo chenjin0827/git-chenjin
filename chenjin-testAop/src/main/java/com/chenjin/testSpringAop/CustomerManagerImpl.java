@@ -6,7 +6,7 @@ public class CustomerManagerImpl implements CustomerManager {
     }
 
     public void deleteCustomer(String name) {
-        int a = 1 / 0;
+        int a=1/0;
         System.out.println("删除了客户： " + name);
     }
 
@@ -18,5 +18,7 @@ public class CustomerManagerImpl implements CustomerManager {
     public void updateCustomer(int id, String name, String password) {
         System.out.println("更改了用户基本信息");
     }
+
+
 
 }
