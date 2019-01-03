@@ -6,7 +6,6 @@ public class CustomerManagerImpl implements CustomerManager {
     }
 
     public void deleteCustomer(String name) {
-        int a=1/0;
         System.out.println("删除了客户： " + name);
     }
 
