@@ -8,10 +8,10 @@ import java.util.Set;
 import junit.framework.TestCase;
 import redis.clients.jedis.Jedis;
 
-public class TestRedis extends TestCase {
+public class TestRedis extends TestCase{
 
     private Jedis getJedis() {
-        Jedis jedis = new Jedis("10.68.113.103", 6379);
+        Jedis jedis = new Jedis("192.168.100.166", 6379);
         return jedis;
     }
 

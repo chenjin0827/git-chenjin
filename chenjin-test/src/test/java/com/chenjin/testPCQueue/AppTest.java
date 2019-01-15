@@ -1,4 +1,4 @@
-package com.chenjin;
+package com.chenjin.testPCQueue;
 
 import static org.junit.Assert.assertTrue;
 
