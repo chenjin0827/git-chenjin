@@ -33,7 +33,8 @@ public class TestItextPdf {
 
         document.add(new Paragraph("合同编号：" + "H201900112344525", setChineseFont()));
         document.add(new Paragraph(" "));
-        Paragraph p = new Paragraph("深圳市公立医院药品集中采购电子交易合同", setChineseFont(20, Font.BOLD));
+        Paragraph p = new Paragraph("深圳市公立医院4+7城市药品集中采购中选品种", setChineseFont(20, Font.BOLD));
+        Paragraph p1 = new Paragraph("电子交易合同", setChineseFont(20, Font.BOLD));
         p.setAlignment(1);
         document.add(p);
         p = new Paragraph("（试行）", setChineseFont(16, Font.NORMAL));
@@ -46,6 +47,7 @@ public class TestItextPdf {
         table.setLockedWidth(true);
         table.setTotalWidth(528);
         table.addCell(myCell4("交收地址：" + "湖北省草埠湖镇"));
+
         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         String today = fmt.format(new Date());
         table.addCell(myCell4("生效时间：" + today + " 有效期：" + "2019-02-13" + " 至 " + "2019-02-13"));
