@@ -16,13 +16,9 @@ public class ApplicationTests {
     @Resource
     private BlogProperties blogProperties;
 
-
     @Test
     public void getHello() throws Exception {
-//        Assert.assertEquals(blogProperties.getName(), "姓名-陈进");
-//        Assert.assertEquals(blogProperties.getWork(), "职业-教师");
         System.out.println(blogProperties.getName());
-//        System.out.println(blogProperties.getRadomInt());
     }
 
 }
