@@ -41,7 +41,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
     <cache:annotation-driven cache-manager="${system.cache}" key-generator="myKeyGenerator"/>
 
-    <bean id="myKeyGenerator" class="com.chenjin.common.cache.key.DefaultKeyGenerator" />
+    <bean id="myKeyGenerator" class="com.chenjin.testPCQueue.common.cache.key.DefaultKeyGenerator" />
 
     <!-- 单机用ehcache -->
     <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
@@ -128,7 +128,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
             </props>
         </property>
         <property name="entityInterceptor">
-            <bean id="baseEntityInterceptor" class="com.chenjin.common.framework.interceptor.BaseEntityInterceptor" />
+            <bean id="baseEntityInterceptor" class="com.chenjin.testPCQueue.common.framework.interceptor.BaseEntityInterceptor" />
         </property>
         <!-- 自动扫描注解方式配置的hibernate类文件 -->
         <property name="packagesToScan">
@@ -137,7 +137,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
             </list>
         </property>
     </bean>
-    <bean id="shiroMyRealm" class="com.chenjin.sys.service.realm.ShiroMyRealm">
+    <bean id="shiroMyRealm" class="com.chenjin.testPCQueue.sys.service.realm.ShiroMyRealm">
     </bean>
     <!-- 重连策略 -->
     <bean id="retryPolicy" class="org.apache.curator.retry.ExponentialBackoffRetry">
@@ -156,11 +156,11 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
     </bean>
     <bean id="zkSerializer" class="org.I0Itec.zkclient.serialize.SerializableSerializer">
     </bean>
-    <bean id="zookeeperTemplate" class="com.chenjin.common.cache.client.CuratorTemplate">
+    <bean id="zookeeperTemplate" class="com.chenjin.testPCQueue.common.cache.client.CuratorTemplate">
         <constructor-arg name="curatorFramework" ref="curatorFramework" />
         <property name="zkSerializer" ref="zkSerializer" />
     </bean>
-    <bean id="shiroSessionDAO" class="com.chenjin.common.cache.dao.ShiroSessionDAO">
+    <bean id="shiroSessionDAO" class="com.chenjin.testPCQueue.common.cache.dao.ShiroSessionDAO">
         <property name="clientTemplate" ref="zookeeperTemplate" />
         <property name="parentPath" value="/ADMIN_SESSIONS" />
     </bean>
@@ -193,16 +193,16 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
         <property name="cacheManager" ref="shiroEhcacheManager" />
     </bean>
     <!-- 基于Form表单的身份验证过滤器 -->
-    <bean id="formAuthenticationFilterhome" class="com.chenjin.sys.service.realm.AuthenticationFilter">
+    <bean id="formAuthenticationFilterhome" class="com.chenjin.testPCQueue.sys.service.realm.AuthenticationFilter">
         <property name="loginUrl" value="/home.jsp" />
     </bean>
-    <bean id="formAuthenticationFilter" class="com.chenjin.sys.service.realm.AuthenticationFilter">
+    <bean id="formAuthenticationFilter" class="com.chenjin.testPCQueue.sys.service.realm.AuthenticationFilter">
         <property name="usernameParam" value="userName" />
         <property name="passwordParam" value="password" />
         <property name="loginUrl" value="/login.jsp" />
         <property name="successUrl" value="/home/index.htmlx" />
     </bean>
-    <bean id="thirdAuthenticationFilter" class="com.chenjin.sys.service.realm.AuthenticationFilter">
+    <bean id="thirdAuthenticationFilter" class="com.chenjin.testPCQueue.sys.service.realm.AuthenticationFilter">
         <property name="loginUrl" value="/thirdLogin/zs.htmlx" />
         <property name="successUrl" value="/home/index.htmlx" />
     </bean>
@@ -226,7 +226,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
         </property>
     </bean>
     <!--由zk做verifyCode存储容器 -->
-    <bean id="verifyCodeDAO" class="com.chenjin.common.cache.dao.VerifyCodeDAO">
+    <bean id="verifyCodeDAO" class="com.chenjin.testPCQueue.common.cache.dao.VerifyCodeDAO">
         <property name="clientTemplate" ref="zookeeperTemplate" />
         <property name="parentPath" value="/SUPERVISE_VERIFYCODE" />
     </bean>
@@ -240,7 +240,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
     <!-- 注解方式配置事物 -->
     <tx:annotation-driven transaction-manager="transactionManager" />
-    <bean id="taskLockDAO" class="com.chenjin.common.cache.dao.TaskLockDAO">
+    <bean id="taskLockDAO" class="com.chenjin.testPCQueue.common.cache.dao.TaskLockDAO">
         <property name="clientTemplate" ref="myEhcacheTemplate" />
     </bean>
     <cache:annotation-driven cache-manager="cacheManager" />
@@ -252,7 +252,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
     <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
         <property name="cacheManager" ref="ehCacheManager" />
     </bean>
-    <bean id="myEhcacheTemplate" class="com.chenjin.common.cache.client.MyEhcacheTemplate">
+    <bean id="myEhcacheTemplate" class="com.chenjin.testPCQueue.common.cache.client.MyEhcacheTemplate">
         <property name="ehCacheCacheManager" ref="cacheManager" />
     </bean>
 </beans>

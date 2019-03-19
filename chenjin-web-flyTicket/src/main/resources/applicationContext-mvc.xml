@@ -19,13 +19,13 @@
 
     <mvc:interceptors>
         <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
-        <bean class="com.chenjin.sys.service.realm.SpringMVCInterceptor"/>
+        <bean class="com.chenjin.testPCQueue.sys.service.realm.SpringMVCInterceptor"/>
     </mvc:interceptors>
 
     <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager">
         <mvc:argument-resolvers>
-            <bean class="com.chenjin.common.framework.argumentsResolver.CurrentUserArgumentsResolver"/>
-            <bean class="com.chenjin.common.framework.argumentsResolver.FastjsonArgumentsResolver"/>
+            <bean class="com.chenjin.testPCQueue.common.framework.argumentsResolver.CurrentUserArgumentsResolver"/>
+            <bean class="com.chenjin.testPCQueue.common.framework.argumentsResolver.FastjsonArgumentsResolver"/>
         </mvc:argument-resolvers>
 
         <mvc:message-converters>

@@ -1,5 +1,5 @@
-<%@page import="com.chenjin.commons.CommonProperties"%>
-<%@page import="com.chenjin.common.web.util.VerifyCodeUtil"%>
+<%@page import="com.chenjin.testPCQueue.commons.CommonProperties"%>
+<%@page import="com.chenjin.testPCQueue.common.web.util.VerifyCodeUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

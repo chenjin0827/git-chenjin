@@ -12,13 +12,13 @@ public class AspectJAdvice {
      * 前置通知：目标方法执行之前执行以下方法体的内容
      * @param jp
      */
-   /* @Before("execution(* com.chenjin.testSpringAop.*.*(..))")
+    /*@Before("execution(* com.chenjin.testSpringAop.*.*(..))")
     public void beforeMethod(JoinPoint jp){
         String methodName = jp.getSignature().getName();
         System.out.println("【前置通知】the method 【" + methodName + "】 begins with " + Arrays.asList(jp.getArgs()));
-    }
+    }*/
 
-    *//**
+    /**
      * 返回通知：目标方法正常执行完毕时执行以下代码
      * @param jp
      * @param result
@@ -40,9 +40,9 @@ public class AspectJAdvice {
 
     *//**
      * 异常通知：目标方法发生异常的时候执行以下代码
-     *//*
-    @AfterThrowing(value="execution(* com.chenjin.testSpringAop.*.*(..))",throwing="e")
-    public void afterThorwingMethod(JoinPoint jp, NullPointerException e){
+     */
+    /*@AfterThrowing(value="execution(* com.chenjin.testSpringAop.*.*(..))",throwing="e")
+    public void afterThorwingMethod(JoinPoint jp, Exception e){
         String methodName = jp.getSignature().getName();
         System.out.println("【异常通知】the method 【" + methodName + "】 occurs exception: " + e);
     }*/

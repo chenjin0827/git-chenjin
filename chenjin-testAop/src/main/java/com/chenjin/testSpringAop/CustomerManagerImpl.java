@@ -5,11 +5,13 @@ public class CustomerManagerImpl implements CustomerManager {
         System.out.print("加入了客户： " + name + "密码是： " + password);
     }
 
-    public void deleteCustomer(String name) {
+    public void deleteCustomer(String name){
+
         System.out.println("删除了客户： " + name);
     }
 
     public String getCustomerById(int id) {
+        int a=1/0;
         System.out.println("找到了用户");
         return "dfy";
     }

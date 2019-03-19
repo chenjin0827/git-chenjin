@@ -15,7 +15,14 @@
     <module>../chenjin-web-flyTicket</module>
     <module>../chenjin-config</module>-->
     <module>../chenjin-web-flyTicket</module>
-    <module>../babasport12</module>
+    <!--<module>../babasport12</module>-->
+    <module>../chenjin-log4j</module>
+    <module>../chenjin-test</module>
+      <module>../chenjin-testAop</module>
+    <module>../xxl-job-admin</module>
+    <module>../chenjin-redis</module>
+    <module>../chenjin-zookeeper</module>
+    <module>../chenjin-springboot</module>
   </modules>
   <packaging>pom</packaging>
 
