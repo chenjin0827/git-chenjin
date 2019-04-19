@@ -45,7 +45,7 @@ web.xml 的加载顺序是：[context-param -> listener -> filter -> servlet -> 
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:/applicationContext-mvc</param-value>
+            <param-value>classpath:applicationContext-mvc.xml</param-value>
         </init-param>
         <!--
     load-on-startup元素标记容器是否在启动的时候就加载这个servlet(实例化并调用其init()方法)。
