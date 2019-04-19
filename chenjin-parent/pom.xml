@@ -23,6 +23,7 @@
     <module>../chenjin-redis</module>
     <module>../chenjin-zookeeper</module>
     <module>../chenjin-springboot</module>
+      <module>../chenjin-springshiro</module>
   </modules>
   <packaging>pom</packaging>
 
