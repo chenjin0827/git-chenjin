@@ -9,14 +9,16 @@ import java.io.IOException;
  */
 public class GenerateUtil {
     private static String comPath ;
-    private static String comPathDot = "com.shyl.msc.qp";
-    private static String entityPath = "D:\\WorkSoft\\shyldemo\\msc\\msc-facade-country/src/main/java/com/shyl/msc/qp/entity";
+    private static String comPathDot = "com.chenjin.myproject";
+    private static String basePath = "E:/gitCodeProject/git-chenjin/chenjin-myproject/";
+    
+    private static String entityPath = basePath+"src/main/java/com/chenjin/myproject/entity";
     //接口地址
-    private static String servicePath = "D:\\WorkSoft\\shyldemo\\msc\\msc-facade-country/src/main/java/com/shyl/msc/qp/service";
+    private static String servicePath = basePath+"src/main/java/com/chenjin/myproject/service";
 
-    private static String servicePackage = "com.shyl.msc.qp.service";
+    private static String servicePackage = "com.chenjin.myproject.service";
     //接口实现类地址
-    private static String perPath = "D:\\WorkSoft\\shyldemo\\msc\\msc-service-country\\src\\main\\java\\com\\shyl\\msc\\qp";
+    private static String perPath = basePath+"/src/main/java/com/chenjin";
     private static String suf = "";
 
 
