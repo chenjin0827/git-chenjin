@@ -10,17 +10,15 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 
 @Service("peopleService")
+@Transactional
 public class PeopleService implements IPeopleService {
 
     @Resource(name = "peopleDao")
     private IPeopleDao peopleDao;
 
-    @Transactional
     @Override
     public People save(People p) {
         People people = peopleDao.save(p);
         return people;
     }
-
-
 }

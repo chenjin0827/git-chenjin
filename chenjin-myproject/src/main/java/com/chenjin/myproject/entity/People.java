@@ -1,12 +1,11 @@
 package com.chenjin.myproject.entity;
 
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "people")
+@Table(name = "t_people")
 public class People extends BaseEntity {
     private String name;
     private String sex;

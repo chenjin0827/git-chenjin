@@ -26,6 +26,4 @@ public class PeopleDao implements IPeopleDao {
         sessionFactory.getCurrentSession().save(p);
         return p;
     }
-
-
 }

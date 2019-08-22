@@ -1,17 +1,13 @@
 package com.chenjin.myproject.controller;
 
-import java.util.List;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import com.chenjin.myproject.entity.Student;
 import com.chenjin.myproject.service.IStudentService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/user//student")
+@RequestMapping("/student")
 public class StudentController {
 
 	@Resource

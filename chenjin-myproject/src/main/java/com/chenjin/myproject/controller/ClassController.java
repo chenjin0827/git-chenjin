@@ -11,7 +11,7 @@ import com.chenjin.myproject.entity.Class;
 import com.chenjin.myproject.service.IClassService;
 
 @Controller
-@RequestMapping("/user//class")
+@RequestMapping("/class")
 public class ClassController {
 
 	@Resource
