@@ -1,4 +1,4 @@
 package com.chenjin.myproject.entity;
 
-public class Student {
+public class Student extends BaseEntity{
 }

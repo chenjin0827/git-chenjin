@@ -7,13 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "people")
-public class People {
-
-
-    @Column(name = "name")
+public class People extends BaseEntity {
     private String name;
-
-    @Column(name = "sex")
     private String sex;
 
     public void setName(String name) {
@@ -31,6 +26,4 @@ public class People {
     public String getName() {
         return name;
     }
-
-
 }
