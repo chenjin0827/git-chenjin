@@ -9,9 +9,6 @@ import javax.persistence.*;
 @Table(name = "people")
 public class People {
 
-    @Id
-    @Column(name = "ID")
-    private int id;
 
     @Column(name = "name")
     private String name;
@@ -35,13 +32,5 @@ public class People {
         return name;
     }
 
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid")
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 }

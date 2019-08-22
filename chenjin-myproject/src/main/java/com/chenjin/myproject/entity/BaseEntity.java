@@ -1,6 +1,9 @@
 package com.chenjin.myproject.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 import java.io.Serializable;
@@ -47,7 +50,7 @@ public abstract class BaseEntity implements Serializable {
     /**
      * 主键
      */
-    protected Long id;
+    private String id;
     /**
      * 新增日期
      */
@@ -107,12 +110,13 @@ public abstract class BaseEntity implements Serializable {
      */
     private Map<String, Object> segmentMap;
 
-    @Transient
-    public Long getId() {
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid")
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
