@@ -21,5 +21,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="configuration">org.hibernate.cfg.Configuration</property>
         <mapping class="com.chenjin.hibernate4.entity.User" />
+        <mapping class="com.chenjin.hibernate4.entity.Dept" />
+        <mapping class="com.chenjin.hibernate4.entity.Employee" />
     </session-factory>
 </hibernate-configuration>
