@@ -26,7 +26,6 @@ public class TestUserDao {
     public void testAddUser() {
         logger.info("Test [UserDao.addUser].");
         User user = new User("admin",1);
-
         userDao.addUser(user);
     }
 
@@ -41,9 +40,10 @@ public class TestUserDao {
     @Test
     public void testGetAll() {
         logger.info("Test [UserDao.listAll].");
-
         List<User> userList = userDao.getAll();
-
+        for (User u :userList) {
+            System.out.println(u);
+        }
     }
 
     @After
