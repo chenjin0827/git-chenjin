@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class TestReflect {
@@ -36,8 +37,10 @@ public class TestReflect {
             if (returnType.isAssignableFrom(java.util.List.class)
                     || returnType.isAssignableFrom(java.util.Set.class)) {
                 System.out.println("m========" + m);
-                Object invoke = m.invoke(class1);
-                System.out.println("invoke====" + invoke);
+                Collection collection = (Collection)m.invoke(class1);
+                for(Object o:collection){
+                    System.out.println("ooo=============="+o);
+                }
             }
 
         }
