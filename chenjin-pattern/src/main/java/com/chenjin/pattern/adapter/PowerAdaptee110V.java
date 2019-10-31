@@ -1,0 +1,1 @@
+package com.chenjin.pattern.adapter;public class PowerAdaptee110V {    private int output = 110;    public int output() {        System.out.println("电源输出电压：" + output);        return output;    }}
