@@ -1,0 +1,1 @@
+package com.chenjin.pattern.adapter;/** * 类适配器模式 * 目标  最终转换成5V */public interface PowerTarget {    /**     * 电源目标，最终要实现的输出结果     * 比如手机充电器 输入220V，最后转换后输出5V     * @return     */     int output5V();}
