@@ -10,6 +10,7 @@ import java.util.concurrent.FutureTask;
 
 public class TestThreadMain {
     /**
+     * 线程优先级1-10  默认5
      * 测试java本身是多线程的操作
      * <p>
      * 1、当前线程id是===6；当前线程名字是==Monitor Ctrl-Break 不清楚作用
@@ -23,9 +24,10 @@ public class TestThreadMain {
      * 5、当前线程id是===2；当前线程名字是==Reference Handler  负责清除引用的线程
      * 6、当前线程id是===1；当前线程名字是==main   主程序
      *
-     *线程的生命周期  创建   就绪  运行  阻塞   死亡
-     * 线程执行start后进入就绪（可运行）状态
-     * 阻塞
+     *线程的生命周期  创建（new）   就绪（start、sleep时间到、interrupt、yield时间片到期、notify、notifyAll）
+     * 运行（run、join）  阻塞（wait、sleep）   死亡（run结束  stop、setDeamon）
+     *刚创建的   start方法变成就绪，yield方法让出资源，重新回到就绪状态，用的比较少
+     * yield和sleep区别  sleep的线程是不会参与排队的
      */
     @Test
     public void testThread999() {
