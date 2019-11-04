@@ -11,12 +11,17 @@ import java.util.concurrent.FutureTask;
 public class TestThread {
     /**
      * 测试java本身是多线程的操作
-     * 当前线程id是===6；当前线程名字是==Monitor Ctrl-Break
-     当前线程id是===5；当前线程名字是==Attach Listener
-     当前线程id是===4；当前线程名字是==Signal Dispatcher
-     当前线程id是===3；当前线程名字是==Finalizer
-     当前线程id是===2；当前线程名字是==Reference Handler
-     当前线程id是===1；当前线程名字是==main
+     *
+     * 1、当前线程id是===6；当前线程名字是==Monitor Ctrl-Break
+     *
+     2、当前线程id是===5；当前线程名字是==Attach Listener  负责获取当前程序运行时相关的信息，
+        内存的印象，线程的栈，类信息的统计，获取系统属性等等
+     3、当前线程id是===4；当前线程名字是==Signal Dispatcher  处理发送给虚拟机信号的线程
+     4、当前线程id是===3；当前线程名字是==Finalizer  调用对象的finalize方法  ，
+     这个方法是对象被回收之前调用的，告诉该对象把最后的临终事情做完，
+     如果此阶段人为处理下，也有可能在此阶段重新复活，不被回收掉
+     5、当前线程id是===2；当前线程名字是==Reference Handler  负责清除引用的线程
+     6、当前线程id是===1；当前线程名字是==main   主程序
      *
      */
     @Test
