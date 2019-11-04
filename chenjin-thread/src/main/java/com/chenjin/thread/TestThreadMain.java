@@ -57,7 +57,7 @@ public class TestThreadMain {
     }
 
     @Test
-    /**
+    /**测试继承Thread的中断标志位
      * stop（停止） resume（继续执行） suspend（挂起） 已过时 ，
      * 不推荐使用，使用不会释放资源，比如挂起里面有锁，别的线程就永远获取不到了
      * interrupt方法  中断一个线程，并不是强行关闭这个线程，而是中断标志位置为true
@@ -72,6 +72,10 @@ public class TestThreadMain {
         thread4.interrupt();//发出中断信号
     }
 
+    /**
+     * 测试实现runnable的中断标志位
+     * @throws InterruptedException
+     */
     @Test
     public void testThreadInterrupt2() throws InterruptedException {
         Thread5 runnable = new Thread5();
@@ -79,6 +83,18 @@ public class TestThreadMain {
         thread5.start();
         Thread.sleep(20);
         thread5.interrupt();//发出中断信号
+    }
+
+    /**
+     * 测试中断异常时候的处理
+     * @throws InterruptedException
+     */
+    @Test
+    public void testThreadInterrupt3() throws InterruptedException {
+        Thread6 thread6 = new Thread6();
+        thread6.start();
+        Thread.sleep(500);
+        thread6.interrupt();//发出中断信号
     }
 
 

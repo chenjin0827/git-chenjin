@@ -1,7 +1,7 @@
 package com.chenjin.thread;
 
 /**
- * 用于线程中断测试  继承Thread的测试类
+ * 用于线程中断测试  实现Runnable的测试类
  */
 public class Thread5 implements Runnable {
 
