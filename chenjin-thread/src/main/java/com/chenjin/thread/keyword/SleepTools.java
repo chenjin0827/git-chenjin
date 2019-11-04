@@ -22,11 +22,11 @@ public class SleepTools {
 
     /**
      * 按毫秒休眠
-     * @param senconds
+     * @param ms
      */
-    public static final void ms(int senconds){
+    public static final void ms(int ms){
         try {
-            TimeUnit.MILLISECONDS.sleep(senconds);
+            TimeUnit.MILLISECONDS.sleep(ms);
         } catch (InterruptedException e) {
             System.out.println("按毫秒休眠出现异常！");
             e.printStackTrace();

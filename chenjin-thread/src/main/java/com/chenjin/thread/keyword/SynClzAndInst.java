@@ -68,12 +68,21 @@ public class SynClzAndInst {
     }
 
     public static void main(String[] args) {
-
-        SynClzAndInst synClzAndInst1 = new SynClzAndInst();
+/**
+ * 测试对象锁
+ */
+      /*  SynClzAndInst synClzAndInst1 = new SynClzAndInst();
         SynClzAndInst synClzAndInst2 = new SynClzAndInst();
-        Thread thread1 = new Thread(new InstanceSyn(synClzAndInst1));
-        Thread thread2 = new Thread(new InstanceSyn2(synClzAndInst1));
+        Thread thread1 = new Thread(new InstanceSyn(synClzAndInst2));
+        Thread thread2 = new Thread(new InstanceSyn2(synClzAndInst2));
         thread1.start();
-        thread2.start();
+        thread2.start();*/
+        /**
+         * 测试类锁  spring的注入是单例，使用类锁才行，不然每个对象都是new出来的锁不住的
+         */
+
+        SynClass synClass = new SynClass();
+        synClass.start();
+
     }
 }
