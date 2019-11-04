@@ -12,6 +12,7 @@ public class TestThreadMain {
     /**
      * 线程优先级1-10  默认5
      * 测试java本身是多线程的操作
+     * 守护线程的意思：和主线程共死的，主线程退出来守护线程就一定会退出
      * <p>
      * 1、当前线程id是===6；当前线程名字是==Monitor Ctrl-Break 不清楚作用
      * <p>
