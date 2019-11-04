@@ -12,9 +12,9 @@ public class TestThread {
     /**
      * 测试java本身是多线程的操作
      *
-     * 1、当前线程id是===6；当前线程名字是==Monitor Ctrl-Break
+     * 1、当前线程id是===6；当前线程名字是==Monitor Ctrl-Break 不清楚作用
      *
-     2、当前线程id是===5；当前线程名字是==Attach Listener  负责获取当前程序运行时相关的信息，
+     2、当前线程id是===5；当前线程名字是==Attach Listener  接收外部命令，负责获取当前程序运行时相关的信息，
         内存的印象，线程的栈，类信息的统计，获取系统属性等等
      3、当前线程id是===4；当前线程名字是==Signal Dispatcher  处理发送给虚拟机信号的线程
      4、当前线程id是===3；当前线程名字是==Finalizer  调用对象的finalize方法  ，
