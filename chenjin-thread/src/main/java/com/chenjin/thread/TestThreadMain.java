@@ -22,6 +22,10 @@ public class TestThreadMain {
      * 如果此阶段人为处理下，也有可能在此阶段重新复活，不被回收掉
      * 5、当前线程id是===2；当前线程名字是==Reference Handler  负责清除引用的线程
      * 6、当前线程id是===1；当前线程名字是==main   主程序
+     *
+     *线程的生命周期  创建   就绪  运行  阻塞   死亡
+     * 线程执行start后进入就绪（可运行）状态
+     * 阻塞
      */
     @Test
     public void testThread999() {
