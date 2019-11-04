@@ -30,6 +30,7 @@ public class DaemonThread extends Thread {
 //        daemonThread.setDaemon(true);
         daemonThread.start();
         Thread.sleep(5);
-        daemonThread.interrupt();
+        daemonThread.interrupt();//不中断测不出来，相当于while一直是true，
+        // 没执行玩，就不会打印finally
     }
 }
