@@ -1,4 +1,4 @@
-package com.chenjin.thread;
+package com.chenjin.thread.define;
 
 public class Thread1 extends Thread{
 

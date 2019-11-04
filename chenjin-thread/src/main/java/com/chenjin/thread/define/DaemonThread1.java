@@ -1,6 +1,4 @@
-package com.chenjin.thread;
-
-import org.junit.jupiter.api.Test;
+package com.chenjin.thread.define;
 
 import java.util.concurrent.TimeUnit;
 

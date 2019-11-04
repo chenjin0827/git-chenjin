@@ -1,4 +1,4 @@
-package com.chenjin.thread;
+package com.chenjin.thread.define;
 
 /**
  * 用于线程中断异常测试
