@@ -14,7 +14,7 @@ public class DaemonThread1 extends Thread {
 
     @Override
     public void run() {
-        System.out.println("enter run()");
+        System.out.println("进入子线程");
         try {
             System.out.println("enter try block");
             //这里如果阻塞时间比主线程长最后就不会进入到finally 因为主线程结束了，守护线程就不管阻塞，跟着结束了 阻塞后面的代码都不会执行，更不会抛异常了
@@ -30,12 +30,15 @@ public class DaemonThread1 extends Thread {
     }
 
 
-    @Test
-    public void testDaemonThread() throws Exception {
+
+
+
+    public static void main(String[] args) throws Exception{
         DaemonThread1 daemonThread = new DaemonThread1();
         //设置守护线程一定要放在start之前才能生效
-            daemonThread.setDaemon(true);
+//        daemonThread.setDaemon(true);
         daemonThread.start();
         TimeUnit.SECONDS.sleep(3);
+        System.out.println("主线程结束");
     }
 }
