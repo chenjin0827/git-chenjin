@@ -9,8 +9,8 @@ public class Cap1Test2 {
         //通过注解形式加载bean
         ApplicationContext app = new AnnotationConfigApplicationContext(Cap1MainConfig.class);
         //从容器中获取bean
-//        Person person = (Person) app.getBean("person");
-//        System.out.println(person);
+        Person person = (Person) app.getBean("person");
+        System.out.println(person);
 /**
  * 根据类型 获取bean的名字 就相当于bean的id
  */
