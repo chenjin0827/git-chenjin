@@ -16,6 +16,8 @@ public class TestDate {
         System.out.println(year);
 
 
-        System.out.println(format.format(new Date()));
+//        System.out.println(format.format(new Date()));
+
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
     }
 }
