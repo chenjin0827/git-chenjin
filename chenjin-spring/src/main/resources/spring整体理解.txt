@@ -1,0 +1,7 @@
+1、Spring core:Spring 核心，它是框架最基础的部分，提供ioc和依赖注入特性
+2、Spring context：Spring上下文容器，它是beanfactory功能加强的一个子接口
+3、Spring web：它提供web应用开发的支持
+4、Spring mvc：针对web应用中mvc思想的实现
+5、Spring dao：提供对jdbc抽象层，简化了jdbc编码，同时，编码更具有健壮性
+6、Spring orm：它支持用于流行的orm框架的整合，比如：Spring+Hibernate、Spring|Mybatis的整合等
+7、Spring aop：面向切面变成
