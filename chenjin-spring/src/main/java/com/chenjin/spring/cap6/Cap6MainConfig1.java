@@ -20,11 +20,18 @@ public class Cap6MainConfig1 {
      * 3、@Import （快速给容器导入一个组件），@Bean有点简单
      * a，@Import（要导入到容器中的组件）：容器会自动注册这个组件，bean的id为全类名
      * b，ImportSelector：是一个接口，返回需要导入到容器的组件的全类名数组
-       c,ImportBeanDefinitionRegistrar :可以手动添加组件到IOC容器，所有
-        bean的注册都可以通过它来实现
+     * c,ImportBeanDefinitionRegistrar :可以手动添加组件到IOC容器，所有
+     * bean的注册都可以通过它来实现
+     * 4、使用spring提供的factoryBean实现
+     * 使用factoryBean 有个注意点 ，必须通过app.getbean获取才能打印出来
      */
     @Bean(name = "person")
     public Person person() {
         return new Person("zhangsan", 18);
+    }
+
+    @Bean
+    public MyFactoryBean myFactoryBean() {
+        return new MyFactoryBean();
     }
 }
