@@ -11,6 +11,7 @@ public class Cap1Test2 {
         //从容器中获取bean
         Person person = (Person) app.getBean("person");
         System.out.println(person);
+        System.out.println();
 /**
  * 根据类型 获取bean的名字 就相当于bean的id
  */
