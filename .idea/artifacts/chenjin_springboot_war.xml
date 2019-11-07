@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="chenjin-springboot:war">
-    <output-path>$PROJECT_DIR$/chenjin-springboot/target</output-path>
-    <root id="archive" name="chenjin-springboot.war">
-      <element id="artifact" artifact-name="chenjin-springboot:war exploded" />
-    </root>
-  </artifact>
-</component>
