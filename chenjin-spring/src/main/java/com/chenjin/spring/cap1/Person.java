@@ -6,6 +6,7 @@ public class Person {
     private Integer age;
 
     public Person(String name, Integer age) {
+        System.out.println("正在创建Person对象。。。");
         this.name = name;
         this.age = age;
     }
