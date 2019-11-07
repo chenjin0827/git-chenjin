@@ -10,6 +10,7 @@ public class Cap1Test1 {
 //        通过配置xml文件加载bean
         ApplicationContext app = new ClassPathXmlApplicationContext("beans.xml");
         Person person = (Person) app.getBean("person");
+        System.out.println("11");
         System.out.println(person);
     }
 }
