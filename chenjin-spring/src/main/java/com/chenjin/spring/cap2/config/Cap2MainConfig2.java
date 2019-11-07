@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Configuration
 @ComponentScan(value = "com.chenjin.spring",excludeFilters =
         {@Filter(type = FilterType.ANNOTATION,
-                classes={Service.class,Controller.class})})
+                classes={Service.class})})
 public class Cap2MainConfig2 {
     //给容器中注册一个bean，类型为返回值的类型 name属性对应容器中的bean的id
     //指定就是取的方法名（首字母小写）作为id
