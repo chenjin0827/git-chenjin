@@ -15,7 +15,7 @@ public class Cap1Test2 {
  * 根据类型 获取bean的名字 就相当于bean的id
  */
         String[] beanNamesForType = app.getBeanNamesForType(Person.class);
-        for (String s:beanNamesForType) {
+        for (String s : beanNamesForType) {
             System.out.println(s);
         }
     }
