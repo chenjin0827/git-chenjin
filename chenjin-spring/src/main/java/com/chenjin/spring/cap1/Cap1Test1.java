@@ -12,5 +12,6 @@ public class Cap1Test1 {
         Person person = (Person) app.getBean("person");
         System.out.println("11");
         System.out.println(person);
+        System.out.println("");
     }
 }
