@@ -8,29 +8,28 @@
   <version>1.0</version>
   <modules>
     <module>../chenjin-config</module>
-    <!--<module>../chenjin-facade</module>
-    <module>../chenjin-service</module>
-    <module>../chenjin-common</module>
-    <module>../chenjin-web-sys</module>
-    <module>../chenjin-web-flyTicket</module>
-    <module>../chenjin-config</module>-->
-    <module>../chenjin-web-flyTicket</module>
-    <!--<module>../babasport12</module>-->
+    <module>../chenjin-activemq</module>
+    <module>../chenjin-facade</module>
+    <module>../chenjin-hibernate4</module>
     <module>../chenjin-log4j</module>
-    <module>../chenjin-test</module>
-      <module>../chenjin-testAop</module>
-    <module>../xxl-job-admin</module>
+    <module>../chenjin-myproject</module>
+    <module>../chenjin-pattern</module>
     <module>../chenjin-redis</module>
-    <module>../chenjin-zookeeper</module>
-    <module>../chenjin-springboot</module>
-      <module>../chenjin-springshiro</module>
-      <module>../chenjin-pattern</module>
-      <module>../chenjin-thread</module>
+    <module>../chenjin-service</module>
     <module>../chenjin-spring</module>
+    <module>../chenjin-springboot</module>
+    <module>../chenjin-springshiro</module>
+    <module>../chenjin-temp</module>
+    <module>../chenjin-test</module>
+    <module>../chenjin-testAop</module>
+    <module>../chenjin-testjsp</module>
+    <module>../chenjin-thread</module>
+    <module>../chenjin-web-flyTicket</module>
+    <module>../chenjin-zookeeper</module>
+    <module>../xxl-job-admin</module>
   </modules>
   <packaging>pom</packaging>
 
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <distributionManagement>
