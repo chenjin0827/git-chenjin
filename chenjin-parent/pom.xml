@@ -24,7 +24,6 @@
     <module>../chenjin-testAop</module>
     <module>../chenjin-testjsp</module>
     <module>../chenjin-thread</module>
-    <module>../chenjin-web-flyTicket</module>
     <module>../chenjin-zookeeper</module>
     <module>../xxl-job-admin</module>
   </modules>
