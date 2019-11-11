@@ -16,8 +16,10 @@ public class Cap6Test1 {
         //使用@Import生成的bean 名字是包全名
         Dog dog = (Dog)app.getBean("com.chenjin.spring.cap6.Dog");
         System.out.println(dog);
-
+        //这里有个注意点是spring  源码BeanFactoryUtils的isFactoryDereference方法，BeanFactory.FACTORY_BEAN_PREFIX
+        //取bean的时候如果没有使用&符号，则会调用我们继承FactoryBean的类，最后得到Tiger对象，如果使用了&，则最后获得的对象是MyFactoryBean对象
         Object myFactoryBean = app.getBean("myFactoryBean");
+//        Object myFactoryBean = app.getBean("&myFactoryBean");
         System.out.println("bean的类型===="+myFactoryBean.getClass());
 
     }
