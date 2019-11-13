@@ -48,7 +48,7 @@ public class TestReflect1 {
 
     // 反射私有属性
     @Test
-    public  void reflectPrivateField() {
+    public void reflectPrivateField() {
         try {
             Class<?> classBook = Class.forName("com.chenjin.reflect.Person");
             Object objectBook = classBook.newInstance();
@@ -64,7 +64,7 @@ public class TestReflect1 {
 
     // 反射私有方法
     @Test
-    public  void reflectPrivateMethod() {
+    public void reflectPrivateMethod() {
         try {
             Class<?> classBook = Class.forName("com.chenjin.reflect.Person");
             Method methodBook = classBook.getDeclaredMethod("getSecretName");
@@ -74,6 +74,25 @@ public class TestReflect1 {
             System.out.println(string);
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+    }
+
+    @Test
+    //执行反射方法
+    public void invoike222() {
+        try {
+            Class<?> ServiceManager = Class.forName("com.chenjin.reflect.Person");
+            // 获得ServiceManager的getService方法
+            Object o = ServiceManager.newInstance();
+            //getDeclaredMethod可以获取到所有的方法包括private方法，  getMethod只能获取到public的方法
+            Method getService = ServiceManager.getDeclaredMethod("getSecretName");
+            System.out.println(getService);
+            getService.setAccessible(true);
+            Object invoke = getService.invoke(o);
+            System.out.println(invoke);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
