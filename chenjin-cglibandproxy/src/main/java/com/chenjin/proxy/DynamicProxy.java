@@ -35,7 +35,7 @@ public class DynamicProxy {
 
     public static void main(String[] args) {
         //设置这个值，在程序运行完成后，可以生成代理类
-//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+//        System.getProperties().put("sun.misc.ProxyGenerator.sa veGeneratedFiles", "true");
         IHello hello = (IHello) new DynamicProxyTest().bind(new Hello());
         hello.sayHello();
     }
