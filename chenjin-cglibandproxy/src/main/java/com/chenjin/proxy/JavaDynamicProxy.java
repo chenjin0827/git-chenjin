@@ -1,9 +1,12 @@
 package com.chenjin.proxy;
 
-import org.junit.jupiter.api.Test;
-
 import java.lang.reflect.Proxy;
 
+/**
+ * java动态代理
+ * 作用：对传进来的对象方法进行增强，甚至决定原来对象的方法是否通过反射进行需要调用
+ *
+ */
 public class JavaDynamicProxy {
 
 
