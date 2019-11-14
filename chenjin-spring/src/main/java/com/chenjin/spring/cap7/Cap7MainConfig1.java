@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Import;
 @ComponentScan("com.chenjin.spring.cap7")
 public class Cap7MainConfig1 {
     /**
-     *
+     *在bean的注解上面使用initMethod 和destroyMethod 方法定义初始化和销毁方法
      */
     @Bean(name = "bike", initMethod = "init", destroyMethod = "destroy")
     public Bike bike() {

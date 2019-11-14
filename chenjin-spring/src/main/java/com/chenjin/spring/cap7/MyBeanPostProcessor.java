@@ -5,6 +5,9 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
+/**
+ * 实现spring的 BeanPostProcessor接口
+ */
 @Component
 public class MyBeanPostProcessor implements BeanPostProcessor {
     @Nullable
