@@ -26,6 +26,7 @@
     <module>../chenjin-thread</module>
     <module>../chenjin-zookeeper</module>
     <module>../xxl-job-admin</module>
+      <module>../chenjin-cglibandproxy</module>
   </modules>
   <packaging>pom</packaging>
 
