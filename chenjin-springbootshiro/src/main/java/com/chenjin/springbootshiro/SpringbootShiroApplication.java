@@ -8,9 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan
 @MapperScan(basePackages = {"com.chenjin.springbootshiro.mapper"}) //告诉容器扫描那个包下的Mapper
-public class DemoshiroApplication {
+public class SpringbootShiroApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoshiroApplication.class, args);
+		SpringApplication.run(SpringbootShiroApplication.class, args);
 	}
 }
