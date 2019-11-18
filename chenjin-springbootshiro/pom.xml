@@ -93,9 +93,22 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
+		<!--此次可能是软件没有编译过来，不加页面一直报404，所以手动加入资源-->
+		<resources>
+			<resource>
+				<directory>src/main/webapp</directory>
+				<!--这里必须是META-INF/resources-->
+				<targetPath>META-INF/resources</targetPath>
+				<includes>
+					<include>**/**</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
