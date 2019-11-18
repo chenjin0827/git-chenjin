@@ -19,7 +19,9 @@ public class ShiroConfiguration {
 
     /**
      * 项目启动shiroFilter首先会被初始化,并且逐层传入SecurityManager，Realm，matcher
-     *
+     *shiro的过滤器，可以设置登录页面（setLoginUrl）、权限不足跳转页面（setUnauthorizedUrl）、具体某些页面的权限控制或者身份认证。
+     注意：这里是需要设置SecurityManager（setSecurityManager）。
+     默认的过滤器还有：anno、authc、authcBasic、logout、noSessionCreation、perms、port、rest、roles、ssl、user过滤器。
      * @param manager
      * @return
      */
@@ -37,6 +39,7 @@ public class ShiroConfiguration {
         //键值对:请求-拦截器(权限配置)
         LinkedHashMap<String, String> filterChainDefinitonMap = new LinkedHashMap<String, String>();
         //首页地址index，使用authc过滤器进行处理
+        //authc：所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
         filterChainDefinitonMap.put("/index", "authc");
         //登陆不需要任何过滤
         filterChainDefinitonMap.put("/login", "anon");
@@ -63,7 +66,6 @@ public class ShiroConfiguration {
      */
     @Bean("securityManager")
     public SecurityManager securityManager(@Qualifier("authRealm") AuthRealm authRealm) {
-
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
         manager.setRealm(authRealm);
         return manager;
@@ -77,7 +79,6 @@ public class ShiroConfiguration {
      */
     @Bean("authRealm")
     public AuthRealm authRealm(@Qualifier("credentialmatcher") Credentialmatcher matcher) {
-
         AuthRealm authRealm = new AuthRealm();
         //信息放入缓存
         authRealm.setCacheManager(new MemoryConstrainedCacheManager());
@@ -103,7 +104,6 @@ public class ShiroConfiguration {
      */
     @Bean
     public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(@Qualifier("securityManager") SecurityManager manager) {
-
         AuthorizationAttributeSourceAdvisor advisor = new AuthorizationAttributeSourceAdvisor();
         advisor.setSecurityManager(manager);
         return advisor;
