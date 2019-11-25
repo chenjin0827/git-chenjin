@@ -7,6 +7,8 @@ import java.util.concurrent.TimeUnit;
  * 守护线程的意思：和主线程共死的，主线程退出来守护线程就一定会退出
  * finally不能保证一定执行
  * 测试方法：修改本类中的
+ * 测试线程的时候一定要使用main函数，用@Test函数是测试不出来的
+ * yield和sleep其实也就是时间等待的区别，简单理解为sleep(0)就是yield，yield是让出机会大家重新竞争cpu
  */
 public class DaemonThread1 extends Thread {
 
