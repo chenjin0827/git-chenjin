@@ -19,6 +19,11 @@ class IntThrad extends Thread {
         int count = 0;
         while (true) {
             synchronized (res) {
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 if (res.flag) {//为true说明当前res已经赋值了，当前线程等待
                     //线程从运行状态变为休眠状态,wait可以释放锁，sleep不释放锁
                     try {
@@ -53,6 +58,11 @@ class OutThread extends Thread {
     public void run() {
         while (true) {
             synchronized (res) {
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 if (!res.flag) {
                     try {
                         res.wait();//如果没有值那么等待
