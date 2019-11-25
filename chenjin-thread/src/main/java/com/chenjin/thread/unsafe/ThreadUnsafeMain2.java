@@ -27,6 +27,9 @@ class ThreadTrain2 implements Runnable {
 
     public  synchronized  void show() {
         //同步代码块 这里的object相当于锁，一样的才能锁住,同步方法就是用的this锁
+        //解释下这里为什么还要判断下，两个线程同时到达show()方法，count都为1，那么
+        //这里不判断的话，两个线程都会按1执行下去，加的synchronized就形同虚设，
+        // 只不过一个线程要等另一个线程先执行完罢了
         if (count > 0) {
             try {
                 Thread.sleep(50);
