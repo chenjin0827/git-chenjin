@@ -8,7 +8,7 @@ public class StopThreadDemo2 {
         StopThread2 stopThread2 = new StopThread2();
         stopThread2.start();
         for (int i = 0; i < 10; i++) {
-            Thread.sleep(20);
+            Thread.sleep(2000);
             System.out.println("main Thread----");
         }
         stopThread2.interrupt();
