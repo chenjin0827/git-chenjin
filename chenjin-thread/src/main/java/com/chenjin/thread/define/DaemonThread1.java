@@ -9,6 +9,12 @@ import java.util.concurrent.TimeUnit;
  * 测试方法：修改本类中的
  * 测试线程的时候一定要使用main函数，用@Test函数是测试不出来的
  * yield和sleep其实也就是时间等待的区别，简单理解为sleep(0)就是yield，yield是让出机会大家重新竞争cpu
+ * 进程是所有线程的集合，每一个线程是进程中的一条执行路径。
+ * 微波炉例子：sleep是有个时间，就相当于睡觉去了，时间不到我就不会过来竞争cpu资源的，yield就是我热完一个菜了，然后和大家一起重新排队，
+ * 重新一起竞争cpu资源，可以简单理解为sleep(0)就相当于yield
+ * 使用实现实现Runnable接口好，原因实现了接口还可以继续继承，继承了类不能再继承。
+ * 使用多线程的目的是为了提高程序的运行效率
+ * 分批发送短信、迅雷多线程下载等都可以使用多线程处理。
  */
 public class DaemonThread1 extends Thread {
 

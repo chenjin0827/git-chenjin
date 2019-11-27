@@ -3,6 +3,9 @@ package com.chenjin.thread.msg;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 使用多线程完成分批发送短信
+ */
 public class ThreadMsgMain {
     public static void main(String[] args) {
         // 1.初始化用户数据
