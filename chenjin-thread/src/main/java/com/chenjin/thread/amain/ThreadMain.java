@@ -41,6 +41,10 @@ package com.chenjin.thread.main;
  * 真正终止线程要自己处理下，出现异常会重新将中断标志位置为false，此时应该重新在catch中调用interrupt，将
  * 中断标志位重新置为false，
  * 如果不出现异常，调用isInterrupted，如果中断位为true，中断线程就好了
+ * 19、多线程有三大特性，原子性、可见性、有序性
+ * 原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。
+ * 简单一个例子：银行转账：a账户扣款，b账户增加钱，一起成功或者一起失败这个就是原子性。int a=a+1;底层会调用赋值等运算操作，无法保证全部成功或者
+ * 全部失败，就不具有原子性
  */
 public class ThreadMain {
     public static void main(String[] args) {
