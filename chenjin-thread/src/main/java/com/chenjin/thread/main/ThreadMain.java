@@ -34,6 +34,13 @@ package com.chenjin.thread.main;
  * lock是可以手动加锁、解锁的，synchronized是系统决定加锁的
  * 17、ReentrantLock是一个可重入的互斥锁，ReentrantLock由最近成功获取锁，还没有释放的线程所拥有
  * ，如a方法获取锁了，b方法也需要用这把锁，那b方法就可以直接用，不用再去竞争
+ * 18、  对线程停止的理解：
+ * 使用退出标志，使线程正常退出，也就是当run方法完成后线程终止。
+ * 使用stop方法强行终止线程（这个方法不推荐使用，因为stop和suspend、resume一样，也可能发生不可预料的结果）。
+ * 使用interrupt方法中断线程。 线程在阻塞状态，此方法注意一点，使用中断标识只是打了一个标记，
+ * 真正终止线程要自己处理下，出现异常会重新将中断标志位置为false，此时应该重新在catch中调用interrupt，将
+ * 中断标志位重新置为false，
+ * 如果不出现异常，调用isInterrupted，如果中断位为true，中断线程就好了
  */
 public class ThreadMain {
     public static void main(String[] args) {

@@ -14,9 +14,9 @@ public class StopThreadDemo1 {
         while (true) {
             System.out.println("thread main..");
             if (i == 300) {
-                 stopThread1.stopThread();
-                thread1.interrupt();
-                thread2.interrupt();
+                stopThread1.stopThread();
+//                thread1.interrupt();
+//                thread2.interrupt();
                 break;
             }
             i++;
@@ -32,12 +32,6 @@ class StopThread implements Runnable {
     @Override
     public synchronized void run() {
         while (flag) {
-           try {
-                wait();
-            } catch (Exception e) {
-                e.printStackTrace();
-                stopThread();
-            }
             System.out.println("thread run..");
         }
 
