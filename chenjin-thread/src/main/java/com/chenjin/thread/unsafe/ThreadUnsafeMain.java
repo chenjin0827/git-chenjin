@@ -10,11 +10,14 @@ package com.chenjin.thread.unsafe;
  * 线程安全的解决：1、使用synchronized包裹起来代码，也叫同步代码块，只包裹住存在线程安全的代码块
  * 2、使用jdk1.5的并发包lock锁
  * 一个很重要的注意点 synchronized不能直接加到run方法上，不然就相当于一个单线程了
+ * 此处就算count使用static修饰也会出现一张票出现多次的情况，线程不安全
+ *
  */
 class ThreadTrain implements Runnable {
     //火车票总数
     private int count = 100;
     private Object object = new Object();
+
     @Override
     public void run() {
         //此处如果在run方法上加synchronized，由于是while循环，知道不满足条件count>0线程才会释放锁，
