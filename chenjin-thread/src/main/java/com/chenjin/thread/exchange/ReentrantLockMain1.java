@@ -2,7 +2,20 @@ package com.chenjin.thread.exchange;
 
 
 import java.util.concurrent.locks.*;
-
+/**
+ * 多线程之间的通讯
+ * 演示手动开锁、解锁
+ * ReentrantLock 重入锁
+ */
+public class ReentrantLockMain1 {
+    public static void main(String[] args) {
+        Res2 res2 = new Res2();
+        IntThrad2 intThrad = new IntThrad2(res2);
+        OutThread2 outThread = new OutThread2(res2);
+        intThrad.start();
+        outThread.start();
+    }
+}
 class Res2 {
 
     public String userSex;
@@ -43,7 +56,7 @@ class IntThrad2 extends Thread {
                 }
                 count = (count + 1) % 2;
                 res2.flag = true;
-                res2.condition.signal();
+                res2.condition.signal();//唤醒
                 ;//写完后唤醒另外的线程
 
             } catch (Exception e) {
@@ -92,15 +105,4 @@ class OutThread2 extends Thread {
     }
 }
 
-/**
- * 多线程之间的通讯 wait和notify的理解
- */
-public class ReentrantLockMain1 {
-    public static void main(String[] args) {
-        Res2 res2 = new Res2();
-        IntThrad2 intThrad = new IntThrad2(res2);
-        OutThread2 outThread = new OutThread2(res2);
-        intThrad.start();
-        outThread.start();
-    }
-}
+
