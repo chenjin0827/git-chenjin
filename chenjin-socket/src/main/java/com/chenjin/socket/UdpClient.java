@@ -11,7 +11,7 @@ public class UdpClient {
         DatagramSocket ds = new DatagramSocket();
         String str = "客户端发送数据....";
         byte[] strByte = str.getBytes();
-        DatagramPacket dp = new DatagramPacket(strByte, strByte.length, InetAddress.getByName("192.168.1.3"), 8080);
+        DatagramPacket dp = new DatagramPacket(strByte, strByte.length, InetAddress.getByName("192.168.100.1"), 8080);
         ds.send(dp);
         ds.close();
     }
