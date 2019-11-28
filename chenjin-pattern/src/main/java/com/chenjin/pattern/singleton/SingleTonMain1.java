@@ -1,13 +1,13 @@
 package com.chenjin.pattern.singleton;
 
 /**
- * 饱汉单例
+ * 饱汉单例 因为绑定在类上，所以天生线程安全
  */
 public class SingleTonMain1 {
     private SingleTonMain1() {
 
     }
-    private static SingleTonMain1 singleTonMain1 =new SingleTonMain1();
+    private static final SingleTonMain1 singleTonMain1 =new SingleTonMain1();
     public static SingleTonMain1 getSingleTonMain1() {
         return singleTonMain1;
     }

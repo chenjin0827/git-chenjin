@@ -3,6 +3,7 @@ package com.chenjin.pattern.singleton;
 /**
  * 饿汉单例(懒汉)，存在线程安全问题,
  * 可以使用synchronized同步锁实现多线程下也线程安全
+ * 效率没有饿汉式高，因为饿汉式类初始化就已经初始化了
  */
 public class SingleTonMain2 {
     private SingleTonMain2() {
