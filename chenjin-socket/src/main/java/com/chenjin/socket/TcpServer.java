@@ -24,7 +24,7 @@ public class TcpServer {
     public static void main(String[] args) throws IOException {
         System.out.println("socket服务器端启动....");
         ServerSocket serverSocket = new ServerSocket(8080);
-        //获取客户端对象
+        //等待客户端连接，阻塞状态
         Socket accept = serverSocket.accept();
         InputStream inputStream = accept.getInputStream();
         byte[] buf= new byte[1024];
