@@ -10,6 +10,7 @@ import java.lang.reflect.Method;
 
 /**
  * Cglib方式代理
+ * spring aop就是用的cglib
  */
 public class CglibProxy implements MethodInterceptor {
     @Override
