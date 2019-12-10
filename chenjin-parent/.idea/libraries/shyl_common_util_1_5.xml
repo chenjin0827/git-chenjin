@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="shyl-common-util-1.5">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../testWeb/web/WEB-INF/lib/shyl-common-util-1.5.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

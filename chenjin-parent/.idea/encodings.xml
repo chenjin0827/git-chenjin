@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/../babasport12" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-activemq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-cglibandproxy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../chenjin-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-facade" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-hibernate4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-jsonandxml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-log4j" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-myproject" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../chenjin-web-flyTicket" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../testWeb/web/WEB-INF/lib/shyl-common-util-1.0.jar" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/../testWeb/web/WEB-INF/lib/shyl-common-util-1.5.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/../chenjin-pattern" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-socket" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-springshiro" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-temp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-testAop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-testjsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-thread" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../chenjin-zookeeper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../xxl-job-admin" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

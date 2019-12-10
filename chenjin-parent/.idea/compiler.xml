@@ -6,20 +6,59 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="babasport" />
+        <module name="chenjin-cglibandproxy" />
+        <module name="chenjin-testAop" />
+        <module name="chenjin-jsonandxml" />
+        <module name="chenjin-service" />
+        <module name="chenjin-pattern" />
+        <module name="chenjin-spring" />
+        <module name="chenjin-zookeeper" />
+        <module name="chenjin-facade" />
+        <module name="chenjin-redis" />
         <module name="chenjin-config" />
-        <module name="chenjin-web-flyTicket" />
+        <module name="chenjin-myproject" />
+        <module name="chenjin-springshiro" />
+        <module name="chenjin-temp" />
+        <module name="xxl-job-admin" />
+        <module name="chenjin-test" />
+        <module name="chenjin-springboot" />
+        <module name="chenjin-log4j" />
+        <module name="chenjin-activemq" />
+        <module name="chenjin-hibernate4" />
+        <module name="chenjin-testjsp" />
+        <module name="chenjin-socket" />
+        <module name="chenjin-thread" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="babasport" target="1.5" />
-      <module name="chenjin-common" target="1.7" />
+      <module name="chenjin-activemq" target="1.7" />
+      <module name="chenjin-cglibandproxy" target="1.8" />
       <module name="chenjin-config" target="1.7" />
       <module name="chenjin-facade" target="1.7" />
+      <module name="chenjin-hibernate4" target="1.7" />
+      <module name="chenjin-jsonandxml" target="1.7" />
+      <module name="chenjin-log4j" target="1.7" />
+      <module name="chenjin-myproject" target="1.7" />
       <module name="chenjin-parent" target="1.5" />
+      <module name="chenjin-pattern" target="1.7" />
+      <module name="chenjin-redis" target="1.7" />
       <module name="chenjin-service" target="1.7" />
-      <module name="chenjin-web-flyTicket" target="1.8" />
-      <module name="chenjin-web-sys" target="1.7" />
+      <module name="chenjin-socket" target="1.7" />
+      <module name="chenjin-spring" target="1.6" />
+      <module name="chenjin-springboot" target="1.7" />
+      <module name="chenjin-springshiro" target="1.7" />
+      <module name="chenjin-temp" target="1.5" />
+      <module name="chenjin-test" target="1.7" />
+      <module name="chenjin-testAop" target="1.7" />
+      <module name="chenjin-testjsp" target="1.8" />
+      <module name="chenjin-thread" target="1.7" />
+      <module name="chenjin-zookeeper" target="1.7" />
+      <module name="xxl-job-admin" target="1.7" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="chenjin-testjsp" options="-parameters" />
+    </option>
   </component>
 </project>

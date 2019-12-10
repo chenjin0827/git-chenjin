@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../babasport12/babasport.iml" filepath="$PROJECT_DIR$/../babasport12/babasport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-activemq/chenjin-activemq.iml" filepath="$PROJECT_DIR$/../chenjin-activemq/chenjin-activemq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-cglibandproxy/chenjin-cglibandproxy.iml" filepath="$PROJECT_DIR$/../chenjin-cglibandproxy/chenjin-cglibandproxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../chenjin-config/chenjin-config.iml" filepath="$PROJECT_DIR$/../chenjin-config/chenjin-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-facade/chenjin-facade.iml" filepath="$PROJECT_DIR$/../chenjin-facade/chenjin-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-hibernate4/chenjin-hibernate4.iml" filepath="$PROJECT_DIR$/../chenjin-hibernate4/chenjin-hibernate4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-jsonandxml/chenjin-jsonandxml.iml" filepath="$PROJECT_DIR$/../chenjin-jsonandxml/chenjin-jsonandxml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-log4j/chenjin-log4j.iml" filepath="$PROJECT_DIR$/../chenjin-log4j/chenjin-log4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-myproject/chenjin-myproject.iml" filepath="$PROJECT_DIR$/../chenjin-myproject/chenjin-myproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/chenjin-parent.iml" filepath="$PROJECT_DIR$/chenjin-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../chenjin-web-flyTicket/chenjin-web-flyTicket.iml" filepath="$PROJECT_DIR$/../chenjin-web-flyTicket/chenjin-web-flyTicket.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../testWeb/testWeb.iml" filepath="$PROJECT_DIR$/../testWeb/testWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-pattern/chenjin-pattern.iml" filepath="$PROJECT_DIR$/../chenjin-pattern/chenjin-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-redis/chenjin-redis.iml" filepath="$PROJECT_DIR$/../chenjin-redis/chenjin-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-service/chenjin-service.iml" filepath="$PROJECT_DIR$/../chenjin-service/chenjin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-socket/chenjin-socket.iml" filepath="$PROJECT_DIR$/../chenjin-socket/chenjin-socket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-spring/chenjin-spring.iml" filepath="$PROJECT_DIR$/../chenjin-spring/chenjin-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-springboot/chenjin-springboot.iml" filepath="$PROJECT_DIR$/../chenjin-springboot/chenjin-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-springshiro/chenjin-springshiro.iml" filepath="$PROJECT_DIR$/../chenjin-springshiro/chenjin-springshiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-temp/chenjin-temp.iml" filepath="$PROJECT_DIR$/../chenjin-temp/chenjin-temp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-test/chenjin-test.iml" filepath="$PROJECT_DIR$/../chenjin-test/chenjin-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-testAop/chenjin-testAop.iml" filepath="$PROJECT_DIR$/../chenjin-testAop/chenjin-testAop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-testjsp/chenjin-testjsp.iml" filepath="$PROJECT_DIR$/../chenjin-testjsp/chenjin-testjsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-thread/chenjin-thread.iml" filepath="$PROJECT_DIR$/../chenjin-thread/chenjin-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../chenjin-zookeeper/chenjin-zookeeper.iml" filepath="$PROJECT_DIR$/../chenjin-zookeeper/chenjin-zookeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../xxl-job-admin/xxl-job-admin.iml" filepath="$PROJECT_DIR$/../xxl-job-admin/xxl-job-admin.iml" />
     </modules>
   </component>
 </project>

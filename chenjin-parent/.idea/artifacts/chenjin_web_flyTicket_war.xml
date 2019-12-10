@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="chenjin-web-flyTicket:war">
-    <output-path>$PROJECT_DIR$/../chenjin-web-flyTicket/target</output-path>
-    <root id="archive" name="chenjin-web-flyTicket.war">
-      <element id="artifact" artifact-name="chenjin-web-flyTicket:war exploded" />
-    </root>
-  </artifact>
-</component>
