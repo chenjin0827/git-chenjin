@@ -1,6 +1,6 @@
 package com.chenjin.javastandard.cap1;
 
-import org.junit.jupiter.api.Test;
+import  org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
