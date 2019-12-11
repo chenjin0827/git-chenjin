@@ -29,6 +29,7 @@
       <module>../chenjin-cglibandproxy</module>
       <module>../chenjin-jsonandxml</module>
     <module>../chenjin-socket</module>
+    <module>../chenjin-javastandard</module>
   </modules>
   <packaging>pom</packaging>
 
