@@ -7,10 +7,13 @@ import java.util.Random;
 public class generateIdCardNo {
     public static void main(String[] args) {
         long a = System.currentTimeMillis();
-        System.out.println(getIdNo("19930827", true));
-        System.out.println(getIdNo("20100112", false));
-        System.out.println(getIdNo(true));
-        System.out.println(getIdNo(false));
+//        System.out.println(getIdNo("19930827", true));
+//        System.out.println(getIdNo("20100112", false));
+        for(int i=0;i<50;i++){
+            System.out.println(getIdNo(true));
+            System.out.println(getIdNo(false));
+        }
+
     }
     public static String getIdNo(boolean male) {
         //随机生成生日 1~99岁
