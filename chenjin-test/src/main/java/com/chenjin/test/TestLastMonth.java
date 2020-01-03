@@ -8,5 +8,6 @@ public class TestLastMonth {
         calendar.add(Calendar.MONTH, -1);
         String str =new SimpleDateFormat("yyyy-MM").format(calendar.getTime());
         System.out.println(str);
+        System.out.println("1111");
     }
 }
