@@ -7,8 +7,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.james.cache.dao.ArticleDao;
-import com.james.cache.service.ArticleService;
+import com.chenjin.cache.dao.ArticleDao;
+import com.chenjin.cache.service.ArticleService;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {

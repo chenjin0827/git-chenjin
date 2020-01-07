@@ -10,9 +10,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.james.cache.basic.Constants;
-import com.james.cache.service.RedisArticleService;
-import com.james.cache.utils.JedisUtils;
+import com.chenjin.cache.basic.Constants;
+import com.chenjin.cache.service.RedisArticleService;
+import com.chenjin.cache.utils.JedisUtils;
 
 /**
 * 文章发布使用redis技术
