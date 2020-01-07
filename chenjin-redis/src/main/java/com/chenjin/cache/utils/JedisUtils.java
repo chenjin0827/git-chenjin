@@ -14,9 +14,6 @@ import redis.clients.jedis.BinaryClient.LIST_POSITION;
 
 /**
 * Redis通用工具类
-* @author 【享学课堂】 James老师 qq ：1076258117  
-* @author 【享学课堂】 架构技术QQ群       ：684504192 
-* @author 【享学课堂】 往期视频依娜老师 ：2470523467
 */
 @Component
 public class JedisUtils {
@@ -28,11 +25,6 @@ public class JedisUtils {
 
 	/**
 	 * 传入ip和端口号构建redis 连接
-	 * 
-	 * @param ip
-	 *            ip
-	 * @param prot
-	 *            端口
 	 */
 	public JedisUtils() {
 		if (pool == null) {
@@ -89,9 +81,6 @@ public class JedisUtils {
 
 	/**
 	 * 向redis存入序列化的key和value,并释放连接资 如果key已经存在 则覆
-	 * 
-	 * @param key
-	 * @param value
 	 * @return 成功 返回OK 失败返回 0
 	 */
 	public String setSerializer(byte[] keyBytes, byte[] valueBytes) {
@@ -307,8 +296,6 @@ public class JedisUtils {
 	}
 	/**
 	 * 删除多个字符串key 并释放连
-	 * 
-	 * @param key*
 	 * @return 成功返回value 失败返回null
 	 */
 	public boolean mdel(List<String> keys) {
@@ -1840,9 +1827,6 @@ public class JedisUtils {
 
 	/**
 	 * 返还到连接池
-	 * 
-	 * @param pool
-	 * @param redis
 	 */
 	public static void returnResource(JedisPool pool, Jedis jedis) {
 		if (jedis != null) {

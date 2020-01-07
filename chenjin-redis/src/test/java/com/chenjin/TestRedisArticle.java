@@ -1,18 +1,14 @@
 package com.chenjin;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
+import com.chenjin.cache.service.RedisArticleService;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.chenjin.cache.service.RedisArticleService;
-import org.junit.runners.MethodSorters;
+import javax.annotation.Resource;
 
 /**
 * Redis业务测试用例

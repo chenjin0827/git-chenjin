@@ -28,7 +28,7 @@ public class RedisArticleServiceImpl implements RedisArticleService{
 	private JedisUtils jedis;
 	/**
 	* 文章提交发布
-	* @param 标题  内容  链接  用户ID
+	*  标题  内容  链接  用户ID
 	* @return 文章的ID
 	*/
 	@Override
@@ -67,7 +67,7 @@ public class RedisArticleServiceImpl implements RedisArticleService{
 	
 	/**
 	* 文章投票
-	* @param  用户ID 文章ID（article:001）
+	*   用户ID 文章ID（article:001）
 	*/
 	@Override
 	public void articleVote(String userId, String article) {
