@@ -10,8 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chenjin-redis</artifactId>
-    <name>chenjin-redis</name>
+    <artifactId>chenjin-redis-article</artifactId>
+    <name>chenjin-redis-article</name>
     <description>记录redis相关</description>
     <url>http://www.example.com</url>
 
