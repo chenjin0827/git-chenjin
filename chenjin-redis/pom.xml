@@ -48,7 +48,7 @@
 
     </dependencies>
     <build>
-        <finalName>chenjin-redis-lock</finalName>
+        <finalName>chenjin-redis</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
