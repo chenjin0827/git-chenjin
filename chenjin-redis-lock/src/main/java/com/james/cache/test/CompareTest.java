@@ -75,9 +75,6 @@ public class CompareTest {
 
 	/**
 	 * 使用redis提供的del进行远程多次删除，以达到批量删除的效果
-	 * @author 【享学课堂】 James老师 qq ：1076258117
-	 * @author 【享学课堂】 架构技术QQ群 ：684504192
-	 * @author 【享学课堂】 往期视频依娜老师 ：2470523467
 	 */
 	public static boolean del(String... keys) {
 

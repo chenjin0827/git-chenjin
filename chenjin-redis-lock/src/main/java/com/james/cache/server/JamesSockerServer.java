@@ -17,7 +17,6 @@ public class JamesSockerServer {
 			receive.getInputStream().read(result);
 			System.out.println(new String(result));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

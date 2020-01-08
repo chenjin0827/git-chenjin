@@ -40,9 +40,6 @@ public class PipelineRespTest {
 	/**
 	 * 测试手写的JamesPipeline，实现批量删除
 	 * redis提供的批量设值mset  批量取值 mget，但没有批量删除mdel指令
-	 * @author 【享学课堂】 James老师 qq ：1076258117
-	 * @author 【享学课堂】 架构技术QQ群 ：684504192
-	 * @author 【享学课堂】 往期视频依娜老师 ：2470523467
 	 */
 	public static void mdel(Socket socket,String... keys) throws IOException {	 
 		JamesPipeline pipe = new JamesPipeline(socket);
