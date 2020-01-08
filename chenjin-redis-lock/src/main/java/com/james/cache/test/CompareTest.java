@@ -4,13 +4,12 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;
 /**
  * 未使用pipeline和使用pipeline后，批量删除的性能对比
- * 
  */
 public class CompareTest {
 	//5000组KEY-VALUE键值对，数组长度为10000
 	//String[]{"key:0","v0","key:1","v1","key:2","v2","key:3","v3","key:4","v4"......."key:4999","v:4999"})
 	public static int arraylength = 10000;
-	public static String ip = "127.0.0.1";
+	public static String ip = "192.168.100.166";
 	public static int port = 6379;
 	//测试主函数
 	public static void main(String[] args) throws Exception {
@@ -24,8 +23,6 @@ public class CompareTest {
 	    long t = System.currentTimeMillis();
 	    del(keys);
 	    System.out.println(System.currentTimeMillis()-t);
-	    
-	    
 	    //初始化数据
 	    mset(arraylength);
 

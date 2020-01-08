@@ -71,8 +71,5 @@
 		<property name="dataSource" ref="dataSource" />
 		<qualifier value="transactionManager" />
 	</bean>
-
 	<tx:annotation-driven transaction-manager="transactionManager" />
-	
-
 </beans>

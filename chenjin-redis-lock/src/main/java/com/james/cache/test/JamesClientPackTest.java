@@ -9,14 +9,17 @@ import redis.clients.jedis.Pipeline;
 public class JamesClientPackTest {
 	public static int arraylength = 10000;
 	public static String ip = "127.0.0.1";
-	public static int port = 8888;
+	public static int port = 6379;
 	
-	 public static void main(String[] args) throws Exception { 
-		 
-		 
-	      Jedis jedis = new Jedis(ip,port);
-	      jedis.set("lison", "james");
-	      jedis.close();
+	 public static void main(String[] args) throws Exception {
+	 	try{
+			Jedis jedis = new Jedis(ip,port);
+			jedis.set("lison", "james");
+			jedis.close();
+		}catch (Exception e){
+			System.out.println("出现异常，用于测试屏蔽掉");
+		}
+
 	 }
 	 
 }

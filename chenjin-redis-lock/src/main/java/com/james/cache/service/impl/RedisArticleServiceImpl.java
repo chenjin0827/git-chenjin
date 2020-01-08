@@ -16,19 +16,15 @@ import com.james.cache.utils.JedisUtils;
 
 /**
 * 文章发布使用redis技术
-* @author 【享学课堂】 James老师 qq ：1076258117  
-* @author 【享学课堂】 架构技术QQ群       ：684504192 
-* @author 【享学课堂】 往期视频依娜老师 ：2470523467
 */
 @Service
 public class RedisArticleServiceImpl implements RedisArticleService{
-
 
 	@Resource
 	private JedisUtils jedis;
 	/**
 	* 文章提交发布
-	* @param 标题  内容  链接  用户ID
+	*  标题  内容  链接  用户ID
 	* @return 文章的ID
 	*/
 	@Override
@@ -40,8 +36,6 @@ public class RedisArticleServiceImpl implements RedisArticleService{
         jedis.sadd(voted, userId); //将投票的用户记录到voted:1键集合来……
         jedis.expire(voted, Constants.ONE_WEEK_IN_SECONDS); //设置失效时间
         //删数据之前,是不是要转移一下
-        
-
         long now = System.currentTimeMillis() / 1000;
         //long score = 0l;
         //生成文章ID
@@ -67,12 +61,10 @@ public class RedisArticleServiceImpl implements RedisArticleService{
 	
 	/**
 	* 文章投票
-	* @param  用户ID 文章ID（article:001）
+	*  用户ID 文章ID（article:001）
 	*/
 	@Override
 	public void articleVote(String userId, String article) {
-		
-		
 		//计算投票截止时间
         long cutoff = (System.currentTimeMillis() / 1000) - Constants.ONE_WEEK_IN_SECONDS;
         //检查是否还可以对文章进行投票,如果该文章的发布时间比截止时间小，则已过期，不能进行投票
@@ -81,8 +73,7 @@ public class RedisArticleServiceImpl implements RedisArticleService{
         }
     	//获取文章主键id
         String articleId = article.substring(article.indexOf(':') + 1); ////article:1   解1
-        
-        
+
         //将投票的用户加入到键为voted:1的集合中，表示该用户已投过票了 voted:1  set集合里来
         //0 并不1 
         
@@ -92,10 +83,6 @@ public class RedisArticleServiceImpl implements RedisArticleService{
         }
 	}
 
-	
-	
-	
-	
 	/**
 	* 文章列表查询（分页）
 	* @param  page  key
@@ -122,10 +109,8 @@ public class RedisArticleServiceImpl implements RedisArticleService{
 	public String hget(String key, String feild) {
 		return jedis.hget(key,feild);
 	}
-
 	@Override
 	public Map<String, String> hgetAll(String key) {
 		return jedis.hgetAll(key);
 	}
-	
-} 
+}

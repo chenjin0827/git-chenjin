@@ -11,7 +11,7 @@ import java.net.Socket;
 public class JamesSockerServer {
 	public static void main(String[] args) {
 		try {
-			ServerSocket serverSocket = new ServerSocket(8888);
+			ServerSocket serverSocket = new ServerSocket(6379);
 			Socket receive = serverSocket.accept();
 			byte[] result = new byte[1024];
 			receive.getInputStream().read(result);

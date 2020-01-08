@@ -16,9 +16,9 @@ public class OneArticleVote {
 
     public void run() {
     	//连接redis
-        Jedis jedis = new Jedis("192.168.1.111");
+        Jedis jedis = new Jedis("192.168.100.166");
         //访问redis的密码
-        jedis.auth("12345678");
+//        jedis.auth("12345678");
         //选择数据库号
         jedis.select(15);
         //发布文章，返回文章ID
@@ -30,9 +30,7 @@ public class OneArticleVote {
         for (Map.Entry<String,String> entry : articleData.entrySet()){
             System.out.println("  " + entry.getKey() + ": " + entry.getValue());
         }
-
         System.out.println();
-
         System.out.println("开始对文章"+"article:" + articleId+"进行投票啦~~~~~");
         //cang用户给James的文章投票
         articleVote(jedis, "teacherCang", "article:" + articleId);
@@ -49,8 +47,8 @@ public class OneArticleVote {
         addGroups(jedis, articleId, new String[]{"java"});
         System.out.println("文章id"+articleId+"添加java组, 除了此文章外，还有文章信息如下:");
         //获取java组的所有文章
-        articles = getGroupArticles(jedis, "java", 1);
-        printArticles(articles);
+//        articles = getGroupArticles(jedis, "java", 1);
+//        printArticles(articles);
         assert articles.size() >= 1;
     }
     //文章发布，数据初始化…………

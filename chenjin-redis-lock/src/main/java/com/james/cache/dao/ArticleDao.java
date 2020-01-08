@@ -5,5 +5,4 @@ import java.util.Map;
 
 public interface ArticleDao {
 	List<Map> queryArticleVoteByPostTime(String articleId);
-   
 }

@@ -1,37 +1,29 @@
 package com.james.cache.utils;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.springframework.stereotype.Component;
-
+import redis.clients.jedis.BinaryClient.LIST_POSITION;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.Pipeline;
-import redis.clients.jedis.BinaryClient.LIST_POSITION;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
 * Redis通用工具类
-* @author 【享学课堂】 James老师 qq ：1076258117  
-* @author 【享学课堂】 架构技术QQ群       ：684504192 
-* @author 【享学课堂】 往期视频依娜老师 ：2470523467
 */
 @Component
 public class JedisUtils {
-
 	private JedisPool pool = null;
-	private String ip = "192.168.42.111";
+	private String ip = "192.168.100.166";
 	private int port = 6379;
 	private String auth = "12345678";
-
 	/**
 	 * 传入ip和端口号构建redis 连接
 	 * 
-	 * @param ip
 	 *            ip
-	 * @param prot
 	 *            端口
 	 */
 	public JedisUtils() {

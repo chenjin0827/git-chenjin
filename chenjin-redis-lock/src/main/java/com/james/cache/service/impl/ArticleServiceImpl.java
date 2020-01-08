@@ -21,13 +21,9 @@ public class ArticleServiceImpl implements ArticleService {
 	*/
 	@Override
 	public List<Map> queryArticleVoteByPostTime(String articleId) {
-		// TODO Auto-generated method stub
 		List<Map> l= articleDao.queryArticleVoteByPostTime(articleId);
 		System.out.println("=============="+l.toString());
 		return l;
 	}
-
-	 
-
 }
 
