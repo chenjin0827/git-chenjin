@@ -14,7 +14,7 @@
     <module>../chenjin-log4j</module>
     <module>../chenjin-myproject</module>
     <module>../chenjin-pattern</module>
-    <module>../chenjin-redis-article</module>
+    <module>../chenjin-redis</module>
     <module>../chenjin-service</module>
     <module>../chenjin-spring</module>
     <module>../chenjin-springboot</module>
@@ -30,7 +30,6 @@
       <module>../chenjin-jsonandxml</module>
     <module>../chenjin-socket</module>
     <module>../chenjin-javastandard</module>
-    <module>../chenjin-redis-lock</module>
   </modules>
   <packaging>pom</packaging>
 
