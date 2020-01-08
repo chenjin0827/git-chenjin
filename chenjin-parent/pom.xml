@@ -30,6 +30,7 @@
       <module>../chenjin-jsonandxml</module>
     <module>../chenjin-socket</module>
     <module>../chenjin-javastandard</module>
+    <module>../chenjin-redis-lock</module>
   </modules>
   <packaging>pom</packaging>
 
