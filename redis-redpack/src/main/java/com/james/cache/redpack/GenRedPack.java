@@ -3,7 +3,6 @@ package com.james.cache.redpack;
 import java.util.concurrent.CountDownLatch;
 
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.annotation.JSONPOJOBuilder;
 import com.james.cache.basic.Basic;
 import com.james.cache.utils.JedisUtils;
 
@@ -12,7 +11,7 @@ public class GenRedPack {
 	 * 多线程模拟红包池初始化  Jedis类
 	 */
 	public static void genHongBao() throws InterruptedException {
-		JedisUtils jedis = new JedisUtils(Basic.ip, Basic.port, Basic.auth);
+		final JedisUtils jedis = new JedisUtils(Basic.ip, Basic.port, Basic.auth);
 		jedis.flushall();  //清空,线上不要用.....
 
 		//发枪器

@@ -3,7 +3,6 @@ package com.james.cache.redpack;
 import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 
-import org.apache.catalina.tribes.util.UUIDGenerator;
 import org.springframework.util.StopWatch;
 
 import com.james.cache.basic.Basic;
