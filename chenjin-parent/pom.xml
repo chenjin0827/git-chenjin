@@ -30,6 +30,9 @@
       <module>../chenjin-jsonandxml</module>
     <module>../chenjin-socket</module>
     <module>../chenjin-javastandard</module>
+    <module>../redis-article</module>
+    <module>../redis-cartshop</module>
+    <module>../redis-redpack</module>
   </modules>
   <packaging>pom</packaging>
 
