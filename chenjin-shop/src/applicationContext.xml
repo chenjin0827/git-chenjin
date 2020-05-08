@@ -73,7 +73,9 @@
 	<bean id="checkImgAction" class="cn.itcast.shop.user.action.CheckImgAction" scope="prototype">
 		
 	</bean>
-	
+
+	<bean id="privilegeInterceptor" class="cn.itcast.shop.interceptor.PrivilegeInterceptor">
+	</bean>
 	<!-- 用户模块的Action -->
 	<bean id="userAction" class="cn.itcast.shop.user.action.UserAction" scope="prototype">
 		<!-- 注入Service -->
