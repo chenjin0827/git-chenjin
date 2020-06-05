@@ -14,25 +14,25 @@ import java.util.Date;
 @Controller
 public class TestController {
 
-    //todo     http://localhost:8080/baseType.do?age=10
-    //todo 500 http://localhost:8080/baseType.do
-    //todo 400 http://localhost:8080/baseType.do?age=abc
+    //     http://localhost:8080/baseType.do?age=10
+    // 500 http://localhost:8080/baseType.do
+    // 400 http://localhost:8080/baseType.do?age=abc
     @RequestMapping(value = "baseType.do")
     @ResponseBody
     public String baseType(int age){
         return "age:"+age;
     }
 
-    //todo     http://localhost:8080/baseType2.do?age=10
-    //todo     http://localhost:8080/baseType2.do
-    //todo 400 http://localhost:8080/baseType2.do?age=abc
+    //     http://localhost:8080/baseType2.do?age=10
+    //     http://localhost:8080/baseType2.do
+    // 400 http://localhost:8080/baseType2.do?age=abc
     @RequestMapping(value = "baseType2.do")
     @ResponseBody
     public String baseType2(Integer age){
         return "age:"+age;
     }
 
-    //todo http://localhost:8080/array.do?name=Tom&name=Lucy&name=Jim
+    // http://localhost:8080/array.do?name=Tom&name=Lucy&name=Jim
     @RequestMapping(value = "array.do")
     @ResponseBody
     public String array(String[] name){
@@ -43,9 +43,9 @@ public class TestController {
         return sbf.toString();
     }
 
-    //todo http://localhost:8080/object.do?name=Tom&age=10
-    //TODO http://localhost:8080/object.do?name=Tom&age=10&contactInfo.phone=10086
-    //TODO http://localhost:8080/object.do?user.name=Tom&admin.name=Lucy&age=10
+    // http://localhost:8080/object.do?name=Tom&age=10
+    // http://localhost:8080/object.do?name=Tom&age=10&contactInfo.phone=10086
+    // http://localhost:8080/object.do?user.name=Tom&admin.name=Lucy&age=10
     @RequestMapping(value = "object.do")
     @ResponseBody
     public String object(User user,Admin admin){
@@ -61,22 +61,22 @@ public class TestController {
         binder.setFieldDefaultPrefix("admin.");
     }
 
-    //TODO http://localhost:8080/list.do?users[0].name=Tom&users[1].name=Lucy
-    //TODO http://localhost:8080/list.do?users[0].name=Tom&users[1].name=Lucy&users[20].name=Jim
+    // http://localhost:8080/list.do?users[0].name=Tom&users[1].name=Lucy
+    // http://localhost:8080/list.do?users[0].name=Tom&users[1].name=Lucy&users[20].name=Jim
     @RequestMapping(value = "list.do")
     @ResponseBody
     public String list(UserListForm userListForm){
         return "listSize:"+userListForm.getUsers().size() + "  " + userListForm.toString();
     }
 
-    //TODO http://localhost:8080/set.do?users[0].name=Tom&users[20].name=Lucy
+    // http://localhost:8080/set.do?users[0].name=Tom&users[20].name=Lucy
     @RequestMapping(value = "set.do")
     @ResponseBody
     public String set(UserSetForm userSetForm){
         return userSetForm.toString();
     }
 
-    //TODO http://localhost:8080/map.do?users['X'].name=Tom&users['X'].age=10&users['Y'].name=Lucy
+    // http://localhost:8080/map.do?users['X'].name=Tom&users['X'].age=10&users['Y'].name=Lucy
     @RequestMapping(value = "map.do")
     @ResponseBody
     public String map(UserMapForm userMapForm){
