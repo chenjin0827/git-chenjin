@@ -33,6 +33,7 @@
     <module>../redis-article</module>
     <module>../redis-cartshop</module>
     <module>../redis-redpack</module>
+    <module>../chenjin-springmvc</module>
   </modules>
   <packaging>pom</packaging>
 
