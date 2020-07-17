@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <display-name>chenjin-filter</display-name>
+  <filter>
+    <filter-name>
+      FilterDemo1
+    </filter-name>
+    <filter-class>
+      com.chenjin.filter.FilterDemo1
+    </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>
+      FilterDemo1
+    </filter-name>
+    <url-pattern>
+      /filter
+    </url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>
+      FilterDemo2
+    </filter-name>
+    <filter-class>
+      com.chenjin.filter.FilterDemo2
+    </filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>
+      FilterDemo2
+    </filter-name>
+    <url-pattern>
+      /filter
+    </url-pattern>
+  </filter-mapping>
+</web-app>
