@@ -33,7 +33,9 @@
     <module>../redis-article</module>
     <module>../redis-cartshop</module>
     <module>../redis-redpack</module>
-    <module>../chenjin-springmvc</module>
+    <module>../chenjin-maven</module>
+    <module>../chenjin-filter</module>
+
   </modules>
   <packaging>pom</packaging>
 
