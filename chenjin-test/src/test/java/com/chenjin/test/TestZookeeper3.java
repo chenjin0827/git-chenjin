@@ -19,7 +19,7 @@ public class TestZookeeper3 {
             zkClient.create().creatingParentsIfNeeded().forPath("/dubbo/config/dubbo/dubbo.properties");
         }
         zkClient.setData().forPath
-                ("/dubbo/config/dubbo/dubbo.properties", ("dubbo.registry.address=zookeeper://192.168.100.166:2181" +
+                ("/dubbo/config/dubbo/dubbo.properties", ("dubbo.registry.address=zookeeper://192.168.100.166:2181\n" +
                 "dubbo.metadata-report.address=zookeeper://192.168.100.166:2181").getBytes());
     }
 }
