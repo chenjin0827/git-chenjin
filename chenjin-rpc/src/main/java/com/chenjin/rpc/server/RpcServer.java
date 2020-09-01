@@ -1,7 +1,19 @@
 package com.chenjin.rpc.server;
 
 import com.chenjin.rpc.RpcService;
+import com.chenjin.rpc.coder.RpcDecoder;
+import com.chenjin.rpc.coder.RpcEncoder;
+import com.chenjin.rpc.handler.RpcHandler;
+import com.chenjin.rpc.pojo.RpcRequest;
+import com.chenjin.rpc.pojo.RpcResponse;
 import com.chenjin.rpc.registry.ServiceRegistry;
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.apache.commons.collections4.MapUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +62,38 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
+        NioEventLoopGroup bossGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
+        try {
+            ServerBootstrap bootstrap = new ServerBootstrap();
+            bootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)
+                    .childHandler(new ChannelInitializer<SocketChannel>() {
+                        @Override
+                        protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            //将 RPC 请求进行解码（为了处理请求）
+                            socketChannel.pipeline().addLast(new RpcDecoder(RpcRequest.class))
+                                    // 将 RPC 响应进行编码（为了返回响应）
+                                    .addLast(new RpcEncoder(RpcResponse.class))
+                                    //处理rpc请求
+                                    .addLast(new RpcHandler(handlerMap));
+
+                        }
+                    }).option(ChannelOption.SO_BACKLOG, 128)
+                    .childOption(ChannelOption.SO_KEEPALIVE, true);
+            String[] array = serverAddress.split(":");
+            String host = array[0];
+            int port = Integer.parseInt(array[1]);
+            ChannelFuture future = bootstrap.bind(host, port).sync();
+            LOGGER.debug("server started on port {}", port);
+            if (serviceRegistry != null) {
+                //注册服务地址
+                serviceRegistry.register(serverAddress);
+            }
+            future.channel().closeFuture().sync();
+        } finally {
+            workerGroup.shutdownGracefully();
+            bossGroup.shutdownGracefully();
+        }
 
     }
 
