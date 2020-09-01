@@ -7,6 +7,6 @@ package com.chenjin.rpc;
 public class HelloServiceImpl implements HelloService {
     @Override
     public String sayHello(String name) {
-        return "Hello!  " + name;
+        return "Hello! " + name;
     }
 }
