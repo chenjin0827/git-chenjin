@@ -26,6 +26,7 @@ public class RpcProxy {
         this.serviceDiscovery = serviceDiscovery;
     }
 
+    @SuppressWarnings("unchecked")
     public <T> T create(Class<?> interfaceClass) {
         return (T) Proxy.newProxyInstance(
                 interfaceClass.getClassLoader(),
