@@ -16,6 +16,7 @@ public class ServiceRegistry {
 
     //构造方法
     public ServiceRegistry(String registryAddress) {
+        LOGGER.info("进入zk注册中心构造方法");
         this.registryAddress = registryAddress;
     }
 
@@ -24,6 +25,7 @@ public class ServiceRegistry {
         try {
             zk = new ZooKeeper(registryAddress, Constant.ZK_SESSION_TIMEOUT, watchedEvent -> {
                 boolean b = watchedEvent.getState() == Watcher.Event.KeeperState.SyncConnected;
+                LOGGER.info("zookeeper连接状态"+b);
                 if (b) {
                     countDownLatch.countDown();
                 }
@@ -32,6 +34,7 @@ public class ServiceRegistry {
         } catch (IOException | InterruptedException e) {
             LOGGER.error("zookeeper连接失败");
         }
+        LOGGER.info("zookeeper连接成功");
         return zk;
     }
 

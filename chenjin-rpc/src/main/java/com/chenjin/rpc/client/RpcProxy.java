@@ -3,6 +3,8 @@ package com.chenjin.rpc.client;
 import com.chenjin.rpc.ServiceDiscovery;
 import com.chenjin.rpc.pojo.RpcRequest;
 import com.chenjin.rpc.pojo.RpcResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Proxy;
 import java.util.UUID;
@@ -11,7 +13,7 @@ import java.util.UUID;
  * 使用 Java 提供的动态代理技术实现 RPC 代理（当然也可以使用 CGLib 来实现）
  */
 public class RpcProxy {
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(RpcProxy.class);
     private String serverAddress;
     private ServiceDiscovery serviceDiscovery;
 
@@ -20,6 +22,7 @@ public class RpcProxy {
     }
 
     public RpcProxy(ServiceDiscovery serviceDiscovery) {
+        LOGGER.info("进入到RpcProxy构造方法");
         this.serviceDiscovery = serviceDiscovery;
     }
 

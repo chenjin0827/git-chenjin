@@ -26,6 +26,7 @@ public class ServiceDiscovery {
     private String registryAddress;
 
     public ServiceDiscovery(String registryAddress) {
+        LOGGER.info("进入到ServiceDiscovery构造方法");
         this.registryAddress = registryAddress;
 
         ZooKeeper zk = connectServer();
@@ -37,12 +38,10 @@ public class ServiceDiscovery {
     private ZooKeeper connectServer() {
         ZooKeeper zk = null;
         try {
-            zk = new ZooKeeper(registryAddress, Constant.ZK_SESSION_TIMEOUT, new Watcher() {
-                @Override
-                public void process(WatchedEvent event) {
-                    if (event.getState() == Watcher.Event.KeeperState.SyncConnected) {
-                        latch.countDown();
-                    }
+            zk = new ZooKeeper(registryAddress, Constant.ZK_SESSION_TIMEOUT, event -> {
+                LOGGER.info("zookeeper连接状态为"+event.getState());
+                if (event.getState() == Watcher.Event.KeeperState.SyncConnected) {
+                    latch.countDown();
                 }
             });
             latch.await();
