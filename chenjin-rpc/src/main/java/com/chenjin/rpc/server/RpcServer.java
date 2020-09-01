@@ -89,10 +89,11 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
                 //注册服务地址
                 serviceRegistry.register(serverAddress);
             }
-            future.channel().closeFuture().sync();
+            //此处会存在阻塞情况
+//            future.channel().closeFuture().sync();
         } finally {
-            workerGroup.shutdownGracefully();
-            bossGroup.shutdownGracefully();
+//            workerGroup.shutdownGracefully();
+//            bossGroup.shutdownGracefully();
         }
 
     }
