@@ -21,11 +21,8 @@ public class Consumer {
         return Proxy.newProxyInstance(
                 clazz.getClassLoader(),
                 new Class[]{clazz},
-                (proxy, method, args) ->
-                        new InvocationHandler() {
+                (proxy,method,args)-> {
                             //代理执行方法，上面设置了代理的类
-                            @Override
-                            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                                 //1.建立远程连接
                                 Socket socket = new Socket("127.0.0.1",8888);
                                 //2.要调用的类、方法、参数
@@ -49,7 +46,7 @@ public class Consumer {
 
                                 socket.close();
                                 return object;
-                            }
+//                            }
                         });
     }
 }
