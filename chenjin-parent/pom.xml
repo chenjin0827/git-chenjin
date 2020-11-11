@@ -36,6 +36,8 @@
     <module>../chenjin-maven</module>
     <module>../chenjin-filter</module>
       <module>../chenjin-easyexcel</module>
+      <module>../chenjin-mongo</module>
+      <module>../chenjin-stream</module>
 
   </modules>
   <packaging>pom</packaging>
