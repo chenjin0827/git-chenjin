@@ -8,7 +8,6 @@
   <version>1.0</version>
   <modules>
     <module>../chenjin-config</module>
-    <module>../chenjin-activemq</module>
     <module>../chenjin-facade</module>
     <module>../chenjin-hibernate4</module>
     <module>../chenjin-log4j</module>
