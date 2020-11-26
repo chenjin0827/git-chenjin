@@ -1,0 +1,1 @@
+package com.chenjin.pattern.adapter;public interface PowerInterface {     int output();}
