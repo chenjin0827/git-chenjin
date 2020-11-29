@@ -1,1 +1,1 @@
-package com.chenjin.pattern.adapter;/** * 适配者，比如中国电源220V、日本110V */public class PowerAdaptee220V {    private int output = 220;    public int output() {        System.out.println("电源输出电压：" + output);        return output;    }}
+package com.chenjin.pattern.adapter;/** * 适配者，比如中国电源220V、日本110V */public class PowerAdaptee220V implements PowerInterface{    private int output = 220;    public int output() {        System.out.println("电源输出电压：" + output);        return output;    }}
