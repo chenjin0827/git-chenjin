@@ -44,9 +44,9 @@ public class TestString {
         String str1 = "abc";
         String str2 = new String("abc");
         String str3 = str2.intern();
-        System.out.println(str1 == str2);//false  因为str2重新创建了一个对象，所以和str1的引用地址不相等
-        System.out.println(str1 == str3);//true str3是通过new String("abc").intern（）方式获取String，由于使用了intern()会先到字符串常量池寻找，str1之前创建过，所以直接将str1的引用指向到str3
-        System.out.println(str2 == str3);//false  上面str1和str3地址一致，str2就不等于上面两个了， str2是新创建了一个引用
+        System.out.println(str1 == str2);//false  因为str2重新创建了一个对象，所以和str1的引用地址不相等，str1在字符串常量池中，str2在堆中
+        System.out.println(str2 == str3);//false  使用intern，如果字符串常量池里面存在则从常量池返回，而str2在堆中，str3是返回的常量池的  不相等
+        System.out.println(str1 == str3);//true str3由于使用了intern()会先到字符串常量池寻找，str1就位于字符串常量池，所以相等
 
     }
 }
