@@ -41,13 +41,11 @@ public class TestString {
         Student student2 = new Student();
         student2.setName("张三");
         student2.setCity("深圳");
-
         Student student = new Student("张三", "深圳");
         String name = "张三";
         String city = "深圳";
         String innerName = "张三".intern();
         String innerCity = "深圳".intern();
-
         System.out.println("name:" + (name == student.getName()));
         System.out.println("city:" + (city == student.getCity()));
         System.out.println("innerName:" + (name == innerName));
@@ -55,6 +53,15 @@ public class TestString {
         System.out.println("------------------------------");
         System.out.println(name==student2.getName());
         System.out.println(city==student2.getCity());
+        System.out.println("------------------------------");
+        System.out.println(System.identityHashCode(student.getName()));
+        System.out.println(System.identityHashCode(student.getCity()));
+        System.out.println(System.identityHashCode(student2.getName()));
+        System.out.println(System.identityHashCode(student2.getCity()));
+        System.out.println(System.identityHashCode(name));
+        System.out.println(System.identityHashCode(city));
+        System.out.println(System.identityHashCode(innerName));
+        System.out.println(System.identityHashCode(innerCity));
 
     }
 }
