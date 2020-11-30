@@ -37,6 +37,7 @@
       <module>../chenjin-easyexcel</module>
       <module>../chenjin-mongo</module>
       <module>../chenjin-stream</module>
+      <module>../chenjin-jvm</module>
 
   </modules>
   <packaging>pom</packaging>

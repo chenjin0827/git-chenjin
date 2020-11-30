@@ -8,6 +8,8 @@ public class Desk {
         this.name = name;
         this.width = width;
     }
+    public Desk() {
+    }
 
     public String getName() {
         return name;
