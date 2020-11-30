@@ -3,7 +3,7 @@ package com.chenjin.test;
 public class TestSwitch {
 
     public static void main(String[] args) {
-        String nationalGPOPurchase ="";
+        String nationalGPOPurchase ="1002";
         switch (nationalGPOPurchase) {
             case "1001": {
                 System.out.println(1001);

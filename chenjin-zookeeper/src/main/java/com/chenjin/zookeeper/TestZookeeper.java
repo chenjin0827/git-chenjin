@@ -1,5 +1,6 @@
 package com.chenjin.zookeeper;
 
+
 import org.apache.zookeeper.*;
 
 import java.io.IOException;
@@ -7,7 +8,7 @@ import java.io.IOException;
 public class TestZookeeper {
 
     // 会话超时时间，设置为与系统默认时间一致
-    private static final int SESSION_TIMEOUT = 10 * 1000;
+    private static final int SESSION_TIMEOUT = 1 * 1000;
 
     // 创建 ZooKeeper 实例
     private ZooKeeper zk;

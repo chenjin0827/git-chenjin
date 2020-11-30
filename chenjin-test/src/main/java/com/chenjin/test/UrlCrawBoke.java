@@ -29,6 +29,13 @@ public class UrlCrawBoke {
         List<String> urls = new ArrayList<String>();
 
         // ---------------------------------------------------截取用户ID---------------------------------------------------
+        for(int i=0;i<1000;i++){
+
+            exeuteTimes(urls);
+        }
+    }
+
+    private static void exeuteTimes(List<String> urls) throws IOException {
         StringBuilder url = new StringBuilder(MYURL);
         int begin = url.lastIndexOf("csdn.net/");
         begin += 9;

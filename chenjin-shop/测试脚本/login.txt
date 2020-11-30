@@ -1,6 +1,0 @@
-admin1,admin
-admin2,admin
-admin3,admin
-admin4,admin
-admin5,admin
-admin6,admin
