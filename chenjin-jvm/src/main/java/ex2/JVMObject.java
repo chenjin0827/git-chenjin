@@ -12,16 +12,20 @@ public class JVMObject {
     public static String WOMAN_TYPE = "woman";  // 静态变量
     public static void  main(String[] args)throws Exception {
         Teacher T1 = new Teacher();
-        T1.setName("Mark");
+        T1.setName("TOM");
         T1.setSexType(MAN_TYPE);
         T1.setAge(36);
         for(int i =0 ;i<15 ;i++){
             System.gc();//主动触发GC 垃圾回收 15次--- T1存活
         }
         Teacher T2 = new Teacher();
-        T2.setName("King");
+        T2.setName("TOM");
         T2.setSexType(MAN_TYPE);
         T2.setAge(18);
+        Teacher tom = new Teacher("TOM", MAN_TYPE, 18);
+        System.out.println(tom.getAge());
+        Teacher tom2 = new Teacher("TOM", MAN_TYPE, 22);
+        System.out.println(tom2.getAge());
         Thread.sleep(Integer.MAX_VALUE);//线程休眠
     }
 }
@@ -32,6 +36,12 @@ class Teacher{
     int age;
 
     public Teacher() {
+    }
+
+    public Teacher(String name, String sexType, int age) {
+        this.name = name;
+        this.sexType = sexType;
+        this.age = age;
     }
 
     public String getName() {
