@@ -31,6 +31,9 @@ class Teacher{
     String sexType;
     int age;
 
+    public Teacher() {
+    }
+
     public String getName() {
         return name;
     }
