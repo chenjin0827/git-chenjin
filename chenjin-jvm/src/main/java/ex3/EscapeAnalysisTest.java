@@ -2,6 +2,7 @@ package ex3;
 /**
  * @author King老师
  * 逃逸分析-栈上分配
+ * -XX:-DoEscapeAnalysis 不使用逃逸分析   逃逸分析jvm是默认开启的
  * -XX:-DoEscapeAnalysis -XX:+PrintGC
  */
 public class EscapeAnalysisTest {

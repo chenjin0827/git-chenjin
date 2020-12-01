@@ -18,14 +18,14 @@ public class FinalizeGC {
         instance = new FinalizeGC();
         //对象进行第1次GC
         instance =null;
-        System.gc();
+        System.gc();//执行gc后会调用一次finalize方法，用于对象自我拯救
         Thread.sleep(1000);//Finalizer方法优先级很低，需要等待
         if(instance !=null){
             instance.isAlive();
         }else{
             System.out.println("I am dead！");
         }
-        //对象进行第2次GC
+        //对象进行第2次GC 演示finalize只能执行一次，第二次就死掉了
         instance =null;
         System.gc();
         Thread.sleep(1000);
