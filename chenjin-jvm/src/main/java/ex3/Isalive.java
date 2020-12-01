@@ -15,8 +15,8 @@ public class Isalive {
         //相互引用
         objectA.instance = objectB; //强引用
         objectB.instance = objectA;
-        //切断可达
-        objectA =null;//objectA置为null，到 Isalive的引用没有了，变成了根不可达GCRoots
+        //切断可达 虽然objectA和objectB置为null了，但是new Isalive还是存在的，并且是在相互引用，使用引用计数法则无法完成回收
+        objectA =null;//objectA置为null，到 new Isalive的引用没有了，变成了根不可达GCRoots
         objectB =null;
         //强制垃圾回收
         System.gc();
