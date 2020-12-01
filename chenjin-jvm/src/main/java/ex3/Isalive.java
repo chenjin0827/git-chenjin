@@ -16,7 +16,7 @@ public class Isalive {
         objectA.instance = objectB; //强引用
         objectB.instance = objectA;
         //切断可达
-        objectA =null;
+        objectA =null;//objectA置为null，里面的instance也没有了， instance是存放在局部变量表中，切断了 GCRoots
         objectB =null;
         //强制垃圾回收
         System.gc();
