@@ -43,7 +43,7 @@ public class TestSoftRef {
 				list.add(new byte[1024*1024*1]); //1M的对象 100m
 			}
 		} catch (Throwable e) {
-			//抛出了OOM异常时打印软引用对象
+			//抛出了OOM异常时打印软引用对象 抛出OOM异常后会回收软引用
 			System.out.println("Exception*************"+userSoft.get());
 		}
 
