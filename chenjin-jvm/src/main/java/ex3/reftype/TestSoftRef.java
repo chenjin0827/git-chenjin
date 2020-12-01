@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @author King老师
- * 软引用
+ * 软引用 发生OOM才会回收
  * -Xms20m -Xmx20m
  */
 

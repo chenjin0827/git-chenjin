@@ -4,7 +4,8 @@ import java.lang.ref.WeakReference;
 
 /**
  * @author King老师
- * 弱引用
+ * 弱引用 只要发生GC，就会被回收
+ * 另一个有一个虚引用 PhantomReference，随时都会被回收
  */
 public class TestWeakRef {
 	public static class User{
