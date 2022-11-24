@@ -69,7 +69,7 @@
         <spring.version>5.0.6.RELEASE</spring.version>
         <oracle.version>10.2.0.4.0</oracle.version>
         <spring-data.version>2.1.5.RELEASE</spring-data.version>
-        <hibernate.version>4.3.8.Final</hibernate.version>
+        <hibernate.version>5.3.20.Final</hibernate.version>
         <hibernate-validator.version>5.1.3.Final</hibernate-validator.version>
         <shiro.version>1.2.3</shiro.version>
         <fasterxml.version>2.6.3</fasterxml.version>
